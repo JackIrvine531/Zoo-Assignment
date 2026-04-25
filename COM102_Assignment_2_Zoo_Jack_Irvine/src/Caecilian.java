@@ -1,25 +1,23 @@
 import java.util.Scanner;
 
-public class Shark extends Animal implements Swimable {
-
+public class Caecilian extends Animal implements Slitherable {
 //    instance variable
-    private int numTeeth = 0;
+    private int burrowDepth = 0;
 
 //    scanner setup
     Scanner input = new Scanner(System.in);
 
 //    constructor
-    Shark(String name, String colour, int age, double weight, int numTeeth){
+    Caecilian(String name, String colour, int age, double weight, int burrowDepth) {
         super(name, colour, age, weight);
-        this.numTeeth = numTeeth;
+        this.burrowDepth = burrowDepth;
     }
 
-//    getters
 
+//    getters
     @Override
     public String makeSound() {
-        return "blub, blub, I am" + name +
-                " a " + age + " year old " + this.getClass().getSimpleName();
+        return "click, click, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -42,28 +40,28 @@ public class Shark extends Animal implements Swimable {
         return weight;
     }
 
-    public int getNumTeeth() {
-        return numTeeth;
+    public int getBurrowDepth() {
+        return burrowDepth;
     }
 
     public void displayDetails() {
 
         String details = "Name: " + name + "\n" +
+                "Animal type: " + this.getClass().getSimpleName() + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
                 "Weight: " + weight + "\n" +
-                "Number of Teeth: " + numTeeth + "\n";
+                "Burrow Depth: " + burrowDepth + "\n";
 
         System.out.println(details);
     }
 
-
 //    setters
+
     @Override
     public void setName() {
-        System.out.print("Enter the new name for the shark: ");
+        System.out.print("Enter the new name for the caecilian: ");
         this.name = input.nextLine();
-
     }
 
     @Override
@@ -80,25 +78,25 @@ public class Shark extends Animal implements Swimable {
 
     @Override
     public void setWeight() {
-        System.out.print("Enter the new weight for " + name + " in kg: ");
+        System.out.print("Enter the new weight for " + name + " in grams: ");
         this.weight = input.nextDouble();
     }
 
-    public void setNumTeeth() {
-        System.out.print("Enter the new number of teeth for " + name + ": ");
-        this.numTeeth = input.nextInt();
+    public void setBurrowDepth() {
+        System.out.print("Enter the new burrow depth for " + name + ": ");
+        this.burrowDepth = input.nextInt();
     }
 
-//    swimable interface
+//    slitherable interface
 
     @Override
-    public void swim() {
-        System.out.println(name + " is swimming about");
+    public void slither() {
+        System.out.println(name + " is slithering about");
     }
 
     @Override
-    public void dive() {
-        System.out.println(name + " has dived deeper");
+    public void shedSkin() {
+        System.out.println(name + " is shedding its skin");
     }
 
 }//class

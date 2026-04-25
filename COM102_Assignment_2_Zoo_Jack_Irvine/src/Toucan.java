@@ -16,7 +16,9 @@ public class Toucan extends Animal implements Flyable {
 // make sound
     @Override
     public String makeSound() {
-        return "kreekk, kreekk";
+
+        return "kreekk, kreekk, I am " + name +
+                " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
 //    getters
@@ -42,6 +44,17 @@ public class Toucan extends Animal implements Flyable {
 
     public double getBeakLength() {
         return beakLength;
+    }
+
+    public void displayDetails() {
+
+        String details = "Name: " + name + "\n" +
+                "Colour: " + colour + "\n" +
+                "Age: " + age + "\n" +
+                "Weight: " + weight + "\n" +
+                "Beak Length: " + beakLength + "\n";
+
+        System.out.println(details);
     }
 
 //    setters

@@ -1,12 +1,12 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Zoo {
 
     private String zooName = "Belfast city zoo";
     private ArrayList<Animal> animals;
     Scanner input = new Scanner(System.in);
+    int menuChoice;
     int choice;
 
 
@@ -30,6 +30,7 @@ public class Zoo {
             System.out.println("8. Python");
             System.out.println("9. Caecilian");
             System.out.println("0. return to main menu");
+            System.out.print("Input: ");
 
             choice = input.nextInt();
             input.nextLine();
@@ -124,7 +125,7 @@ public class Zoo {
                     break;
 
                 case 9:
-                    Caecilians caecil = new Caecilians(" ", " ", 0,0,0);
+                    Caecilian caecil = new Caecilian(" ", " ", 0,0,0);
                     caecil.setName();
                     caecil.setColour();
                     caecil.setAge();
@@ -133,66 +134,134 @@ public class Zoo {
                     animals.add(caecil);
                     System.out.println(caecil.getName() + " has been added to the zoo");
                     break;
+
+                case 0: break;
             }
         } while (choice !=0);
     }
 
     //    remove animal by name
-    public void removeAnimal(String name) {
-        Animal toRemove = null;
+    public void removeAnimal() {
 
-        for (Animal a : animals) {
-            if (a.getName().equalsIgnoreCase(name)) {
-                toRemove = a;
-                break;
-            }//inner if
-        }//outter for
+        do {
+            System.out.println("--- Remove animal menu ---");
+            System.out.println("What would you like to do?");
+            System.out.println("1. Remove animal by name");
+            System.out.println("2. See List of all animals");
+            System.out.println("0. return to main menu");
+            System.out.print("Input: ");
 
-        if (toRemove != null) {
-            animals.remove(toRemove);
-            System.out.println(name + " has gone to a farm in the countryside");
-        } else {
-            System.out.println(name + " not found");
-        }
+            choice = input.nextInt();
+            input.nextLine();
+
+            switch (choice) {
+                case 1:
+                    Animal toRemove = null;
+
+                    System.out.println("Enter the name of the animal you want to remove");
+                    String name = input.nextLine();
+
+                    for (Animal a : animals) {
+                        if (a.getName().equalsIgnoreCase(name)) {
+                            toRemove = a;
+                            break;
+                        }//inner if
+                    }//outter for
+
+                    if (toRemove != null) {
+                        animals.remove(toRemove);
+                        System.out.println(name + " has gone to a farm in the countryside");
+                    } else {
+                        System.out.println(name + " not found");
+                    }
+                    break;
+
+                case 2:
+                    displayAllAnimals();
+                    break;
+
+                case 3: break;
+
+
+
+            }//switch
+        } while (choice !=0);
+
+
+
     }// remove animal from zoo
 
     //    update animal details
-    public void updateDetails(String name) {
-        for (Animal a : animals) {
-            if (a.getName().equalsIgnoreCase(name)) {
+    public void updateDetails() {
 
-                do {
-                    System.out.println("--- update menu ---");
-                    System.out.println("1. update name");
-                    System.out.println("2. update colour");
-                    System.out.println("3. update age");
-                    System.out.println("4. update weight");
-                    System.out.println("5. back to menu");
+        do {
+            System.out.println("--- Update details menu ---");
+            System.out.println("1. Update details by name search");
+            System.out.println("2. Display list of all animals");
+            System.out.println("0. Exit Update details menu");
+            System.out.print("Input: ");
 
-                    choice = input.nextInt();
-                    input.nextLine(); //clear buffer
+            menuChoice = input.nextInt();
+            input.nextLine();
 
-                    switch (choice) {
-                        case 1: a.setName();
-                            break;
+            switch (menuChoice) {
+                case 1:
+                    System.out.print("Enter the name of the animal you want to edit: ");
+                    String name = input.nextLine();
 
-                        case 2: a.setColour();
-                            break;
+                    for (Animal a : animals) {
+                        if (a.getName().equalsIgnoreCase(name)) {
 
-                        case 3: a.setAge();
-                            break;
+                            do {
+                                System.out.println("--- update menu ---");
+                                System.out.println("1. update name");
+                                System.out.println("2. update colour");
+                                System.out.println("3. update age");
+                                System.out.println("4. update weight");
+                                System.out.println("0. back to menu");
+                                System.out.print("Input: ");
 
-                        case 4: a.setWeight();
-                            break;
+                                choice = input.nextInt();
+                                input.nextLine(); //clear buffer
 
-                        case 5: System.out.println("exiting update menu");
-                            break;
-                    }//switch
+                                switch (choice) {
+                                    case 1: a.setName();
+                                        break;
+
+                                    case 2: a.setColour();
+                                        break;
+
+                                    case 3: a.setAge();
+                                        break;
+
+                                    case 4: a.setWeight();
+                                        break;
+
+                                    case 0: System.out.println("exiting update menu");
+                                        name = "";
+                                        break;
+                                }//switch
 
 
-                } while (choice !=0);
-            }// inner if
-        }//outter for
+                            } while (choice !=0);
+                        }// inner if
+                        break;
+                    }//outter for
+
+                    break;
+
+                case 2:
+                    displayAllAnimals();
+                    break;
+
+                case 0:
+                    break;
+
+            }
+        } while (menuChoice !=0);
+
+
+
     }//update details
 
 
@@ -263,5 +332,88 @@ public class Zoo {
 
         return dominant;
     }//get dominant colour
+
+    public void displayAllAnimals() {
+        if (animals.isEmpty()) {
+            System.out.println("There are no animals in the Zoo");
+            return;
+        }
+
+        System.out.println("--- Animals in the Zoo ---");
+        for (Animal a : animals) {
+            a.displayDetails();
+            System.out.println("---------");
+        }
+    }//display details
+
+    public void searchMenu() {
+        do {
+            System.out.println("--- Search Menu ---");
+            System.out.println("1. To search zoo animals by name");
+            System.out.println("2. To search zoo animals by colour");
+            System.out.println("0. Exit search menu");
+            System.out.print("Input: ");
+
+            choice = input.nextInt();
+            input.nextLine();
+
+            switch (choice) {
+                case 1:
+                    searchByName();
+                    break;
+
+                case 2:
+                    searchByColour();
+                    break;
+
+                case 0:
+                    break;
+            }
+        } while (choice !=0);
+    }
+
+    public void searchByName() {
+        boolean found = false;
+        System.out.print("Enter the name of the animal to search: ");
+        String name = input.nextLine();
+
+        for (Animal a : animals) {
+            if (a.getName().equalsIgnoreCase(name)) {
+                System.out.println(a.getName() + " found: ");
+                a.displayDetails();
+                System.out.println(a.makeSound());
+
+                found = true;
+                System.out.println("---------");
+            }//inner if
+        }//outter for
+
+        if (!found) {
+            System.out.println("No animal found with that name");
+        }
+
+    }//search by name
+
+    public void searchByColour() {
+        boolean found = false;
+        System.out.print("Enter the colour to search for: ");
+        String colour = input.nextLine();
+
+        for (Animal a : animals) {
+            if (a.getColour().equalsIgnoreCase(colour)) {
+                System.out.println("Animals of that colour found:");
+                a.displayDetails();
+                a.makeSound();
+
+                found = true;
+                System.out.println("---------");
+            }//inner if
+        }//outter for
+
+        if (!found) {
+            System.out.println("No animals found with that colour");
+        }
+
+    }//search by colour
 
 }//class

@@ -16,7 +16,7 @@ public class Penguin extends Animal implements Swimable {
 //  getters
     @Override
     public String makeSound() {
-        return "gak, gak";
+        return "gak, gak, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -41,6 +41,17 @@ public class Penguin extends Animal implements Swimable {
 
     public int getSwimSpeed() {
         return swimSpeed;
+    }
+
+    public void displayDetails() {
+
+        String details = "Name: " + name + "\n" +
+                "Colour: " + colour + "\n" +
+                "Age: " + age + "\n" +
+                "Weight: " + weight + "\n" +
+                "Swim Speed: " + swimSpeed + "\n";
+
+        System.out.println(details);
     }
 
 //    setters

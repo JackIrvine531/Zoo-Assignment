@@ -16,7 +16,7 @@ public class Eagle extends Animal implements Flyable{
 //    getters
     @Override
     public String makeSound() {
-        return "kee-kee-kee";
+        return "kee-kee-kee, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -41,6 +41,17 @@ public class Eagle extends Animal implements Flyable{
 
     public double getWingSpan() {
         return wingSpan;
+    }
+
+    public void displayDetails() {
+
+        String details = "Name: " + name + "\n" +
+                "Colour: " + colour + "\n" +
+                "Age: " + age + "\n" +
+                "Weight: " + weight + "\n" +
+                "Wingspan: " + wingSpan + "\n";
+
+        System.out.println(details);
     }
 
 //    setters

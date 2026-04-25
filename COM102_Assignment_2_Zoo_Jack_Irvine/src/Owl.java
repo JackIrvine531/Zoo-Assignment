@@ -17,7 +17,7 @@ public class Owl extends Animal implements Flyable {
 //  getters
     @Override
     public String makeSound() {
-        return "Hoo, Hoo";
+        return "Hoo, Hoo, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -42,6 +42,16 @@ public class Owl extends Animal implements Flyable {
 
     public int getHearingRange() {
         return hearingRange;
+    }
+
+    public void displayDetails() {
+
+        String details = "Name: " + name + "\n" +
+                "Colour: " + colour + "\n" +
+                "Age: " + age + "\n" +
+                "Weight: " + weight + "\n" +
+                "Hearing Range: " + hearingRange + "\n";
+        System.out.println(details);
     }
 
 //    setters

@@ -17,7 +17,7 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
 
     @Override
     public String makeSound() {
-        return "Hsssss";
+        return "Hsssss, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -42,6 +42,17 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
 
     public double getBiteForce() {
         return biteForce;
+    }
+
+    public void displayDetails() {
+
+        String details = "Name: " + name + "\n" +
+                "Colour: " + colour + "\n" +
+                "Age: " + age + "\n" +
+                "Weight: " + weight + "\n" +
+                "Bite Force: " + biteForce + "\n";
+
+        System.out.println(details);
     }
 
 //    setters

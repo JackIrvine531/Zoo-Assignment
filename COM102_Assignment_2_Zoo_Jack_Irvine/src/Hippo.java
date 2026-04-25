@@ -17,7 +17,7 @@ public class Hippo extends Animal implements Swimable {
 
     @Override
     public String makeSound() {
-        return "honk,honk,honk,honk,honk";
+        return "honk,honk,honk,honk,honk, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -42,6 +42,17 @@ public class Hippo extends Animal implements Swimable {
 
     public boolean getHungryHippo() {
         return hungryHippo;
+    }
+
+    public void displayDetails() {
+
+        String details = "Name: " + name + "\n" +
+                "Colour: " + colour + "\n" +
+                "Age: " + age + "\n" +
+                "Weight: " + weight + "\n" +
+                "Is it a Hungry Hungry Hippo: " + hungryHippo + "\n";
+
+        System.out.println(details);
     }
 
 //    setters
@@ -72,7 +83,7 @@ public class Hippo extends Animal implements Swimable {
 
     public void setHungryHippo() {
         System.out.print("Is " + name + " a hungry hungry hippo? (true or false): ");
-        this.name = input.nextLine();
+        this.hungryHippo = input.nextBoolean();
     }
 
 //    Swimable interface
