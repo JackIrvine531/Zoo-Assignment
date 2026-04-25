@@ -40,8 +40,9 @@ public class Python extends Animal implements Slitherable {
         return weight;
     }
 
-    public int getTongueFlicksPerMin() {
-        return tongueFlicksPerMin;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(tongueFlicksPerMin + " per minute");
     }
 
     public void displayDetails() {
@@ -49,7 +50,7 @@ public class Python extends Animal implements Slitherable {
         String details = "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "kg\n" +
                 "Tongue Flicks Per Minute: " + tongueFlicksPerMin + "\n";
 
         System.out.println(details);
@@ -81,7 +82,8 @@ public class Python extends Animal implements Slitherable {
         this.weight = input.nextDouble();
     }
 
-    public void setTongueFlicksPerMin() {
+    @Override
+    public void setTypeTrait() {
         System.out.print("Enter the new tongue flicks per minute for " + name + ": ");
         this.tongueFlicksPerMin = input.nextInt();
     }
@@ -96,6 +98,11 @@ public class Python extends Animal implements Slitherable {
     @Override
     public void shedSkin() {
         System.out.println(name + " is shedding its skin");
+    }
+
+    @Override
+    public void checkSkinConditions() {
+        System.out.println(name + "'s skin is in good condition");
     }
 
 }//class

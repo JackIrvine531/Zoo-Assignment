@@ -39,8 +39,9 @@ public class Penguin extends Animal implements Swimable {
         return weight;
     }
 
-    public int getSwimSpeed() {
-        return swimSpeed;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(swimSpeed + " MPH");
     }
 
     public void displayDetails() {
@@ -48,7 +49,7 @@ public class Penguin extends Animal implements Swimable {
         String details = "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "kg\n" +
                 "Swim Speed: " + swimSpeed + "\n";
 
         System.out.println(details);
@@ -79,8 +80,9 @@ public class Penguin extends Animal implements Swimable {
         this.weight = input.nextDouble();
     }
 
-    public void setSwimSpeed() {
-        System.out.print("Enter the new swim speed for " + name + ": ");
+    @Override
+    public void setTypeTrait() {
+        System.out.print("Enter the new swim speed in MPH for " + name + ": ");
         this.swimSpeed = input.nextInt();
     }
 
@@ -93,6 +95,11 @@ public class Penguin extends Animal implements Swimable {
     @Override
     public void dive() {
         System.out.println(name + " has dove deeper in the water");
+    }
+
+    @Override
+    public void checkWaterConditions() {
+        System.out.println("The water in " + name + "'s habitat is in good condition");
     }
 
 }//class

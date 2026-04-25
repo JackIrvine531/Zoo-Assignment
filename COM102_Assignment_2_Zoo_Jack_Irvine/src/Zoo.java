@@ -42,7 +42,7 @@ public class Zoo {
                     eagle.setColour();
                     eagle.setAge();
                     eagle.setWeight();
-                    eagle.setWingSpan();
+                    eagle.setTypeTrait();
                     animals.add(eagle);
                     System.out.println(eagle.getName() + " has been added to the zoo");
                     break;
@@ -53,7 +53,7 @@ public class Zoo {
                     toucan.setColour();
                     toucan.setAge();
                     toucan.setWeight();
-                    toucan.setBeakLength();
+                    toucan.setTypeTrait();
                     animals.add(toucan);
                     System.out.println(toucan.getName() + " has been added to the zoo");
                     break;
@@ -64,7 +64,7 @@ public class Zoo {
                     owl.setColour();
                     owl.setAge();
                     owl.setWeight();
-                    owl.setHearingRange();
+                    owl.setTypeTrait();
                     animals.add(owl);
                     System.out.println(owl.getName() + " has been added to the zoo");
                     break;
@@ -75,7 +75,7 @@ public class Zoo {
                     hippo.setColour();
                     hippo.setAge();
                     hippo.setWeight();
-                    hippo.setHungryHippo();
+                    hippo.setTypeTrait();
                     animals.add(hippo);
                     System.out.println(hippo.getName() + " has been added to the zoo");
                     break;
@@ -86,7 +86,7 @@ public class Zoo {
                     shark.setColour();
                     shark.setAge();
                     shark.setWeight();
-                    shark.setNumTeeth();
+                    shark.setTypeTrait();
                     animals.add(shark);
                     System.out.println(shark.getName() + " has been added to the zoo");
                     break;
@@ -97,7 +97,7 @@ public class Zoo {
                     penguin.setColour();
                     penguin.setAge();
                     penguin.setWeight();
-                    penguin.setSwimSpeed();
+                    penguin.setTypeTrait();
                     animals.add(penguin);
                     System.out.println(penguin.getName() + " has been added to the zoo");
                     break;
@@ -108,7 +108,7 @@ public class Zoo {
                     croc.setColour();
                     croc.setAge();
                     croc.setWeight();
-                    croc.setBiteForce();
+                    croc.setTypeTrait();
                     animals.add(croc);
                     System.out.println(croc.getName() + " has been added to the zoo");
                     break;
@@ -119,7 +119,7 @@ public class Zoo {
                     python.setColour();
                     python.setAge();
                     python.setWeight();
-                    python.setTongueFlicksPerMin();
+                    python.setTypeTrait();
                     animals.add(python);
                     System.out.println(python.getName() + " has been added to the zoo");
                     break;
@@ -130,7 +130,7 @@ public class Zoo {
                     caecil.setColour();
                     caecil.setAge();
                     caecil.setWeight();
-                    caecil.setBurrowDepth();
+                    caecil.setTypeTrait();
                     animals.add(caecil);
                     System.out.println(caecil.getName() + " has been added to the zoo");
                     break;
@@ -218,6 +218,7 @@ public class Zoo {
                                 System.out.println("2. update colour");
                                 System.out.println("3. update age");
                                 System.out.println("4. update weight");
+                                System.out.println("5. update Animal type trait");
                                 System.out.println("0. back to menu");
                                 System.out.print("Input: ");
 
@@ -235,6 +236,10 @@ public class Zoo {
                                         break;
 
                                     case 4: a.setWeight();
+                                        break;
+
+                                    case 5:
+                                        a.setTypeTrait();
                                         break;
 
                                     case 0: System.out.println("exiting update menu");
@@ -415,5 +420,7 @@ public class Zoo {
         }
 
     }//search by colour
+
+
 
 }//class

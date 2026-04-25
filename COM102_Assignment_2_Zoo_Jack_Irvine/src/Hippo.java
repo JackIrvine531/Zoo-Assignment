@@ -40,8 +40,9 @@ public class Hippo extends Animal implements Swimable {
         return weight;
     }
 
-    public boolean getHungryHippo() {
-        return hungryHippo;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(hungryHippo);
     }
 
     public void displayDetails() {
@@ -49,7 +50,7 @@ public class Hippo extends Animal implements Swimable {
         String details = "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "kg\n" +
                 "Is it a Hungry Hungry Hippo: " + hungryHippo + "\n";
 
         System.out.println(details);
@@ -81,7 +82,8 @@ public class Hippo extends Animal implements Swimable {
         this.weight = input.nextDouble();
     }
 
-    public void setHungryHippo() {
+    @Override
+    public void setTypeTrait() {
         System.out.print("Is " + name + " a hungry hungry hippo? (true or false): ");
         this.hungryHippo = input.nextBoolean();
     }

@@ -42,8 +42,9 @@ public class Shark extends Animal implements Swimable {
         return weight;
     }
 
-    public int getNumTeeth() {
-        return numTeeth;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(numTeeth);
     }
 
     public void displayDetails() {
@@ -51,7 +52,7 @@ public class Shark extends Animal implements Swimable {
         String details = "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "kg\n" +
                 "Number of Teeth: " + numTeeth + "\n";
 
         System.out.println(details);
@@ -84,7 +85,8 @@ public class Shark extends Animal implements Swimable {
         this.weight = input.nextDouble();
     }
 
-    public void setNumTeeth() {
+    @Override
+    public void setTypeTrait() {
         System.out.print("Enter the new number of teeth for " + name + ": ");
         this.numTeeth = input.nextInt();
     }
@@ -99,6 +101,11 @@ public class Shark extends Animal implements Swimable {
     @Override
     public void dive() {
         System.out.println(name + " has dived deeper");
+    }
+
+    @Override
+    public void checkWaterConditions() {
+        System.out.println("The water in " + name + "'s habitat is in good condition");
     }
 
 }//class

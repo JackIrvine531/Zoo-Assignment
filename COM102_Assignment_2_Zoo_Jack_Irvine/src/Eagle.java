@@ -39,8 +39,9 @@ public class Eagle extends Animal implements Flyable{
         return weight;
     }
 
-    public double getWingSpan() {
-        return wingSpan;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(wingSpan + " Meters");
     }
 
     public void displayDetails() {
@@ -48,7 +49,7 @@ public class Eagle extends Animal implements Flyable{
         String details = "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "kg\n" +
                 "Wingspan: " + wingSpan + "\n";
 
         System.out.println(details);
@@ -81,7 +82,8 @@ public class Eagle extends Animal implements Flyable{
         this.weight = input.nextDouble();
     }
 
-    public void setWingSpan() {
+    @Override
+    public void setTypeTrait() {
         System.out.print("Enter the wing span for " + name + " in meters: ");
         this.wingSpan = input.nextDouble();
     }
@@ -95,5 +97,10 @@ public class Eagle extends Animal implements Flyable{
     @Override
     public void land() {
         System.out.println(name + " has landed");
+    }
+
+    @Override
+    public void performWingCheck() {
+        System.out.println(name + "'s wings are in good condition");
     }
 }//class

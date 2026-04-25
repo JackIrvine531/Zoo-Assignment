@@ -1,0 +1,172 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="wyn7EU4fVwajFoZLZa8V">
+    <mxGraphModel dx="730" dy="1577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-20" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;i&gt;Animal&lt;/i&gt;" vertex="1">
+          <mxGeometry height="330" width="160" x="334" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-21" parent="bihVcS0FKy3VTJJwwm6C-20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="# name: string" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-25" parent="bihVcS0FKy3VTJJwwm6C-20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="# age: int" vertex="1">
+          <mxGeometry height="26" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-26" parent="bihVcS0FKy3VTJJwwm6C-20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="# colour: string" vertex="1">
+          <mxGeometry height="26" width="160" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-27" parent="bihVcS0FKy3VTJJwwm6C-20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="# weight: double" vertex="1">
+          <mxGeometry height="26" width="160" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-22" parent="bihVcS0FKy3VTJJwwm6C-20" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-23" parent="bihVcS0FKy3VTJJwwm6C-20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Animal(name: string, age: int, colour: string, weight: double)&lt;div&gt;&lt;i&gt;+makeSound: string&lt;/i&gt;&lt;br&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="192" width="160" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-33" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Swimable&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ swim()&lt;br&gt;+ dive()&lt;/p&gt;" vertex="1">
+          <mxGeometry height="140" width="190" x="90" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-34" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Flyable&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fly()&lt;br&gt;+ land()&lt;/p&gt;" vertex="1">
+          <mxGeometry height="140" width="190" x="90" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-35" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Owl" vertex="1">
+          <mxGeometry height="410" width="160" x="1020" y="-710" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-36" parent="bihVcS0FKy3VTJJwwm6C-35" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- hearingRange: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-37" parent="bihVcS0FKy3VTJJwwm6C-35" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-38" parent="bihVcS0FKy3VTJJwwm6C-35" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Owl(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ fly: string&lt;/div&gt;&lt;div&gt;+ land: string&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getHearingRange: int&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ setHearingRange: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="262" width="160" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-39" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Hippo" vertex="1">
+          <mxGeometry height="410" width="160" x="660" y="-268" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-40" parent="bihVcS0FKy3VTJJwwm6C-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- hungryHippo: boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-41" parent="bihVcS0FKy3VTJJwwm6C-39" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-42" parent="bihVcS0FKy3VTJJwwm6C-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Hippo(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ swim: string&lt;/div&gt;&lt;div&gt;+ dive: string&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getHungryHippo: boolean&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ setHungryHippo: boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="262" width="160" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-43" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Shark" vertex="1">
+          <mxGeometry height="400" width="160" x="840" y="-268" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-44" parent="bihVcS0FKy3VTJJwwm6C-43" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- numTeeth: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-45" parent="bihVcS0FKy3VTJJwwm6C-43" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-46" parent="bihVcS0FKy3VTJJwwm6C-43" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Shark(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ swim: string&lt;/div&gt;&lt;div&gt;+ dive: string&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getNumTeeth: int&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ setNumTeeth&lt;/div&gt;" vertex="1">
+          <mxGeometry height="252" width="160" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-51" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Slitherable&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ slither()&lt;br&gt;+ shedSkin()&lt;/p&gt;" vertex="1">
+          <mxGeometry height="140" width="190" x="90" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-52" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Python" vertex="1">
+          <mxGeometry height="410" width="180" x="850" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-53" parent="bihVcS0FKy3VTJJwwm6C-52" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- tongueFlicksPerMin: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-54" parent="bihVcS0FKy3VTJJwwm6C-52" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-55" parent="bihVcS0FKy3VTJJwwm6C-52" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Python(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ slither: string&lt;/div&gt;&lt;div&gt;+ shedSkin: string&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getTongueFlicksPerMin: int&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ setT&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ongueFlicksPerMin&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;: int&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="262" width="180" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-56" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Penguin" vertex="1">
+          <mxGeometry height="400" width="160" x="1020" y="-268" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-57" parent="bihVcS0FKy3VTJJwwm6C-56" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- swimSpeed: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-58" parent="bihVcS0FKy3VTJJwwm6C-56" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-59" parent="bihVcS0FKy3VTJJwwm6C-56" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Penguin(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ swim: string&lt;/div&gt;&lt;div&gt;+ dive: string&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getSwimSpeed: int&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ setSwimSpeed: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="252" width="160" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-60" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Caecilians" vertex="1">
+          <mxGeometry height="410" width="160" x="1053" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-61" parent="bihVcS0FKy3VTJJwwm6C-60" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- burrowDepth: int&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-62" parent="bihVcS0FKy3VTJJwwm6C-60" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-63" parent="bihVcS0FKy3VTJJwwm6C-60" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Caecilians(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ slither: string&lt;/div&gt;&lt;div&gt;+ shedSkin: string&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getBurrowDepth: int&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ setBurrowDepth: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="262" width="160" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-64" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Crocodile" vertex="1">
+          <mxGeometry height="430" width="160" x="670" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-65" parent="bihVcS0FKy3VTJJwwm6C-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- biteForce: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-66" parent="bihVcS0FKy3VTJJwwm6C-64" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-67" parent="bihVcS0FKy3VTJJwwm6C-64" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Crocodile(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ slither: string&lt;/div&gt;&lt;div&gt;+ shedSkin&lt;/div&gt;&lt;div&gt;+ swim: string&lt;/div&gt;&lt;div&gt;+ dive: string&lt;/div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getBiteForce: double&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;div&gt;+ setBiteForce: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="282" width="160" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-68" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Toucan" vertex="1">
+          <mxGeometry height="410" width="160" x="840" y="-710" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-69" parent="bihVcS0FKy3VTJJwwm6C-68" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- beakLength: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-70" parent="bihVcS0FKy3VTJJwwm6C-68" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-71" parent="bihVcS0FKy3VTJJwwm6C-68" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Toucan(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ fly: string&lt;/div&gt;&lt;div&gt;+ land: string&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getBeakLength: double&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ setBeakLength: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="262" width="160" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-72" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Eagle" vertex="1">
+          <mxGeometry height="410" width="160" x="660" y="-710" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-73" parent="bihVcS0FKy3VTJJwwm6C-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string&lt;div&gt;- age: int&lt;/div&gt;&lt;div&gt;- colour: string&lt;/div&gt;&lt;div&gt;- weight: double&lt;/div&gt;&lt;div&gt;- wingSpan: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-74" parent="bihVcS0FKy3VTJJwwm6C-72" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-75" parent="bihVcS0FKy3VTJJwwm6C-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Eagle(name: string, age: int, colour: string, weight: double&lt;div&gt;+ makeSound: string&lt;/div&gt;&lt;div&gt;+ fly: string&lt;/div&gt;&lt;div&gt;+ land: string&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ getName: string&lt;/div&gt;&lt;div&gt;+ getAge: int&lt;/div&gt;&lt;div&gt;+ getColour: string&lt;/div&gt;&lt;div&gt;+ getWeigt: double&lt;/div&gt;&lt;div&gt;+ getWingSpan: double&lt;/div&gt;&lt;div&gt;+ displayDetails: void&lt;/div&gt;&lt;div&gt;+ setName: string&lt;/div&gt;&lt;div&gt;+ setAge: int&lt;/div&gt;&lt;div&gt;+ setColour: string&lt;/div&gt;&lt;div&gt;+ setWeight: doube&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ setWingSpan: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="262" width="160" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-79" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Zookeeper" vertex="1">
+          <mxGeometry height="140" width="310" x="380" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-80" parent="bihVcS0FKy3VTJJwwm6C-79" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- name: string" vertex="1">
+          <mxGeometry height="26" width="310" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-81" parent="bihVcS0FKy3VTJJwwm6C-79" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="310" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="bihVcS0FKy3VTJJwwm6C-82" parent="bihVcS0FKy3VTJJwwm6C-79" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ preformDailyCare(Animal : animalList&amp;lt;Animal&amp;gt;: void&lt;div&gt;+ setName: String&lt;/div&gt;&lt;div&gt;+ getName: String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GJlorZcxjbVTgiVMyLFA-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Zoo" vertex="1">
+          <mxGeometry height="86" width="290" x="220" y="-210" as="geometry" />
+        </mxCell>
+        <mxCell id="GJlorZcxjbVTgiVMyLFA-2" parent="GJlorZcxjbVTgiVMyLFA-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- zooName: string" vertex="1">
+          <mxGeometry height="26" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="GJlorZcxjbVTgiVMyLFA-3" parent="GJlorZcxjbVTgiVMyLFA-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="GJlorZcxjbVTgiVMyLFA-4" parent="GJlorZcxjbVTgiVMyLFA-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getReport: (animalList&amp;lt;Animal&amp;gt; animals) : void" vertex="1">
+          <mxGeometry height="26" width="290" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

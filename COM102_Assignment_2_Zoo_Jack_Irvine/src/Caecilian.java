@@ -40,8 +40,9 @@ public class Caecilian extends Animal implements Slitherable {
         return weight;
     }
 
-    public int getBurrowDepth() {
-        return burrowDepth;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(burrowDepth + "cm");
     }
 
     public void displayDetails() {
@@ -50,7 +51,7 @@ public class Caecilian extends Animal implements Slitherable {
                 "Animal type: " + this.getClass().getSimpleName() + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "g\n" +
                 "Burrow Depth: " + burrowDepth + "\n";
 
         System.out.println(details);
@@ -82,8 +83,9 @@ public class Caecilian extends Animal implements Slitherable {
         this.weight = input.nextDouble();
     }
 
-    public void setBurrowDepth() {
-        System.out.print("Enter the new burrow depth for " + name + ": ");
+    @Override
+    public void setTypeTrait() {
+        System.out.print("Enter the new burrow depth in cm for " + name + ": ");
         this.burrowDepth = input.nextInt();
     }
 
@@ -97,6 +99,11 @@ public class Caecilian extends Animal implements Slitherable {
     @Override
     public void shedSkin() {
         System.out.println(name + " is shedding its skin");
+    }
+
+    @Override
+    public void checkSkinConditions() {
+        System.out.println(name + "'s skin is in good condition");
     }
 
 }//class

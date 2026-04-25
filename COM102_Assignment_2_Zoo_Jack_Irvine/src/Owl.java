@@ -40,8 +40,9 @@ public class Owl extends Animal implements Flyable {
         return weight;
     }
 
-    public int getHearingRange() {
-        return hearingRange;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(hearingRange + " Meters");
     }
 
     public void displayDetails() {
@@ -49,7 +50,7 @@ public class Owl extends Animal implements Flyable {
         String details = "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "kg\n" +
                 "Hearing Range: " + hearingRange + "\n";
         System.out.println(details);
     }
@@ -76,12 +77,13 @@ public class Owl extends Animal implements Flyable {
 
     @Override
     public void setWeight() {
-        System.out.print("Enter the new weight for " + name + ": ");
+        System.out.print("Enter the new weight in kg for " + name + ": ");
         this.weight = input.nextDouble();
     }
 
-    public void setHearingRange() {
-        System.out.print("Enter the new hearing range for " + name + ": ");
+    @Override
+    public void setTypeTrait() {
+        System.out.print("Enter the new hearing range in meters for " + name + ": ");
         this.hearingRange = input.nextInt();
     }
 
@@ -95,6 +97,11 @@ public class Owl extends Animal implements Flyable {
     @Override
     public void land() {
         System.out.println(name + " has landed");
+    }
+
+    @Override
+    public void performWingCheck() {
+        System.out.println(name + "'s wings are in good condition");
     }
 
 }//class

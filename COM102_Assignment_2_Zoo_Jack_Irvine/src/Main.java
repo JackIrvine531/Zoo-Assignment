@@ -6,6 +6,7 @@ void main() {
         int choice;
 
         Zoo myZoo = new Zoo("Belfast city zoo");
+        Zookeeper keeper = new Zookeeper("John zoo");
 
 
         do {

@@ -40,8 +40,9 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
         return weight;
     }
 
-    public double getBiteForce() {
-        return biteForce;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(biteForce + " PSI");
     }
 
     public void displayDetails() {
@@ -49,7 +50,7 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
         String details = "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "kg\n" +
                 "Bite Force: " + biteForce + "\n";
 
         System.out.println(details);
@@ -82,7 +83,8 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
         this.weight = input.nextDouble();
     }
 
-    public void setBiteForce() {
+    @Override
+    public void setTypeTrait() {
         System.out.print("Enter a new bite force for " + name + " in PSI: ");
         this.biteForce = input.nextDouble();
     }
@@ -99,6 +101,11 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
         System.out.println(name + " started to shed its skin");
     }
 
+    @Override
+    public void checkSkinConditions() {
+        System.out.println(name + "'s skin is in good condition");
+    }
+
 //    swimable interface
 
     @Override
@@ -109,6 +116,11 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
     @Override
     public void dive() {
         System.out.println(name + " has dove underwater");
+    }
+
+    @Override
+    public void checkWaterConditions() {
+        System.out.println("The water in " + name + "'s habitat is in good condition");
     }
 
 }//class

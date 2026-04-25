@@ -42,8 +42,9 @@ public class Toucan extends Animal implements Flyable {
         return weight;
     }
 
-    public double getBeakLength() {
-        return beakLength;
+    @Override
+    public void getTypeTrait() {
+        System.out.println(beakLength + "cm");
     }
 
     public void displayDetails() {
@@ -51,7 +52,7 @@ public class Toucan extends Animal implements Flyable {
         String details = "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
-                "Weight: " + weight + "\n" +
+                "Weight: " + weight + "g\n" +
                 "Beak Length: " + beakLength + "\n";
 
         System.out.println(details);
@@ -82,7 +83,8 @@ public class Toucan extends Animal implements Flyable {
         this.weight = input.nextDouble();
     }
 
-    public void setBeakLength() {
+    @Override
+    public void setTypeTrait() {
         System.out.print("Enter the new beak length for " + name + " in cm: ");
         this.beakLength = input.nextDouble();
     }
@@ -97,5 +99,10 @@ public class Toucan extends Animal implements Flyable {
     @Override
     public void land() {
         System.out.println(name + " has landed");
+    }
+
+    @Override
+    public void performWingCheck() {
+        System.out.println(name + "'s wings are in good condition");
     }
 }//class
