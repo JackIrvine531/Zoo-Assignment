@@ -34,6 +34,7 @@ public class Zookeeper {
                 ((Slitherable) a).checkSkinConditions();
             }
 
+            System.out.println((a.getName() + " is in good health"));
             System.out.println("---------");
 
 

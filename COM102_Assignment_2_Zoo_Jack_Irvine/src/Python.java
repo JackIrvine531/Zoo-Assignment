@@ -1,11 +1,6 @@
-import java.util.Scanner;
-
 public class Python extends Animal implements Slitherable {
 //    instance variable
-    private int tongueFlicksPerMin = 0;
-
-//    Scanner setup
-    Scanner input = new Scanner(System.in);
+    private int tongueFlicksPerMin;
 
 //    constructor
     Python(String name, String colour, int age, double weight, int tongueFlicksPerMin){
@@ -17,7 +12,7 @@ public class Python extends Animal implements Slitherable {
 
     @Override
     public String makeSound() {
-        return "sssssss, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
+        return "sssssss, I am " + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -40,14 +35,14 @@ public class Python extends Animal implements Slitherable {
         return weight;
     }
 
-    @Override
-    public void getTypeTrait() {
+    public void getTongueFlicksPerMin() {
         System.out.println(tongueFlicksPerMin + " per minute");
     }
 
     public void displayDetails() {
 
         String details = "Name: " + name + "\n" +
+                "Animal type: " + this.getClass().getSimpleName() + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
                 "Weight: " + weight + "kg\n" +
@@ -59,33 +54,27 @@ public class Python extends Animal implements Slitherable {
 //    setters
 
     @Override
-    public void setName() {
-        System.out.print("Enter the new name for the python: ");
-        this.name = input.nextLine();
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
-    public void setColour() {
-        System.out.print("Enter the new colour for " + name + ": ");
-        this.colour = input.nextLine();
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     @Override
-    public void setAge() {
-        System.out.print("Enter the new age for " + name + ": ");
-        this.age = input.nextInt();
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
-    public void setWeight() {
-        System.out.print("Enter the new weight for " + name + " in kg: ");
-        this.weight = input.nextDouble();
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 
-    @Override
-    public void setTypeTrait() {
-        System.out.print("Enter the new tongue flicks per minute for " + name + ": ");
-        this.tongueFlicksPerMin = input.nextInt();
+    public void setTongueFlicksPerMin(int tongueFlicksPerMin) {
+        this.tongueFlicksPerMin = tongueFlicksPerMin;
     }
 
 //    slitherable interface

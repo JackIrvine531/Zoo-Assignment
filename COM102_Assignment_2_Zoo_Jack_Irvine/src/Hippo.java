@@ -1,11 +1,6 @@
-import java.util.Scanner;
-
 public class Hippo extends Animal implements Swimable {
 //    instance variable
-    private boolean hungryHippo = true;
-
-//    scanner setup
-    Scanner input = new Scanner(System.in);
+    private boolean hungryHippo;
 
 //    constructor
     Hippo(String name, String colour, int age, double weight, boolean hungryHippo){
@@ -17,7 +12,7 @@ public class Hippo extends Animal implements Swimable {
 
     @Override
     public String makeSound() {
-        return "honk,honk,honk,honk,honk, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
+        return "honk,honk,honk,honk,honk, I am " + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -40,14 +35,15 @@ public class Hippo extends Animal implements Swimable {
         return weight;
     }
 
-    @Override
-    public void getTypeTrait() {
+
+    public void getHungryHippo() {
         System.out.println(hungryHippo);
     }
 
     public void displayDetails() {
 
         String details = "Name: " + name + "\n" +
+                "Animal type: " + this.getClass().getSimpleName() + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
                 "Weight: " + weight + "kg\n" +
@@ -59,33 +55,27 @@ public class Hippo extends Animal implements Swimable {
 //    setters
 
     @Override
-    public void setName() {
-        System.out.print("Enter the new name for the hippo: ");
-        this.name = input.nextLine();
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
-    public void setColour() {
-        System.out.print("Enter the new colour for " + name + ": ");
-        this.colour = input.nextLine();
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     @Override
-    public void setAge() {
-        System.out.print("Enter the new age for " + name + ": ");
-        this.age = input.nextInt();
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
-    public void setWeight() {
-        System.out.print("Enter the new weight for " + name + " in kg: ");
-        this.weight = input.nextDouble();
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 
-    @Override
-    public void setTypeTrait() {
-        System.out.print("Is " + name + " a hungry hungry hippo? (true or false): ");
-        this.hungryHippo = input.nextBoolean();
+    public void setHungryHippo (boolean hungryHippo) {
+        this.hungryHippo = hungryHippo;
     }
 
 //    Swimable interface
@@ -98,5 +88,10 @@ public class Hippo extends Animal implements Swimable {
     @Override
     public void dive() {
         System.out.println(name + " has dived under the water");
+    }
+
+    @Override
+    public void checkWaterConditions() {
+        System.out.println("The water in " + name + "'s habitat is in good condition");
     }
 }//class

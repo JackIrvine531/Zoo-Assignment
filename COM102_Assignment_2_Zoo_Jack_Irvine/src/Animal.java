@@ -19,14 +19,12 @@ public abstract class Animal {
     public abstract String getColour();
     public abstract int getAge();
     public abstract double getWeight();
-    public abstract void getTypeTrait();
     public abstract void displayDetails();
 
     //    setters
-    public abstract void setName();
-    public abstract void setColour();
-    public abstract void setAge();
-    public abstract void setWeight();
-    public abstract void setTypeTrait();
+    public abstract void setName(String name);
+    public abstract void setColour(String colour);
+    public abstract void setAge(int age);
+    public abstract void setWeight(Double weight);
 
 }//class

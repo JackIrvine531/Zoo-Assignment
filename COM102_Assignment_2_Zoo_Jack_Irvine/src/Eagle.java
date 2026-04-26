@@ -1,11 +1,6 @@
-import java.util.Scanner;
-
 public class Eagle extends Animal implements Flyable{
 //    instance variable
-    private double wingSpan = 0;
-
-//    scanner setup
-    Scanner input = new Scanner(System.in);
+    private double wingSpan;
 
 //    constructor
     Eagle(String name, String colour, int age, double weight, double wingSpan){
@@ -16,7 +11,7 @@ public class Eagle extends Animal implements Flyable{
 //    getters
     @Override
     public String makeSound() {
-        return "kee-kee-kee, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
+        return "kee-kee-kee, I am " + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -39,14 +34,15 @@ public class Eagle extends Animal implements Flyable{
         return weight;
     }
 
-    @Override
-    public void getTypeTrait() {
+
+    public void getWingSpan() {
         System.out.println(wingSpan + " Meters");
     }
 
     public void displayDetails() {
 
         String details = "Name: " + name + "\n" +
+                "Animal type: " + this.getClass().getSimpleName() + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
                 "Weight: " + weight + "kg\n" +
@@ -58,34 +54,28 @@ public class Eagle extends Animal implements Flyable{
 //    setters
 
     @Override
-    public void setName() {
-        System.out.print("Enter the new name for the eagle: ");
-        this.name = input.nextLine();
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
-    public void setColour() {
-        System.out.print("Enter the colour for " + name + ": ");
-        this.colour = input.nextLine();
+    public void setColour(String colour) {
+        this.colour = colour;
 
     }
 
     @Override
-    public void setAge() {
-        System.out.print("Enter the age for " + name + ": ");
-        this.age = input.nextInt();
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
-    public void setWeight() {
-        System.out.print("Enter the weight for " + name + " in kg: ");
-        this.weight = input.nextDouble();
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 
-    @Override
-    public void setTypeTrait() {
-        System.out.print("Enter the wing span for " + name + " in meters: ");
-        this.wingSpan = input.nextDouble();
+    public void setWingSpan(double wingSpan) {
+        this.wingSpan = wingSpan;
     }
 
 //    flyable interface

@@ -1,11 +1,6 @@
-import java.util.Scanner;
-
 public class Caecilian extends Animal implements Slitherable {
 //    instance variable
-    private int burrowDepth = 0;
-
-//    scanner setup
-    Scanner input = new Scanner(System.in);
+    private int burrowDepth;
 
 //    constructor
     Caecilian(String name, String colour, int age, double weight, int burrowDepth) {
@@ -17,7 +12,7 @@ public class Caecilian extends Animal implements Slitherable {
 //    getters
     @Override
     public String makeSound() {
-        return "click, click, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
+        return "click, click, I am " + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -40,8 +35,8 @@ public class Caecilian extends Animal implements Slitherable {
         return weight;
     }
 
-    @Override
-    public void getTypeTrait() {
+
+    public void getBurrowDepth() {
         System.out.println(burrowDepth + "cm");
     }
 
@@ -60,33 +55,27 @@ public class Caecilian extends Animal implements Slitherable {
 //    setters
 
     @Override
-    public void setName() {
-        System.out.print("Enter the new name for the caecilian: ");
-        this.name = input.nextLine();
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
-    public void setColour() {
-        System.out.print("Enter the new colour for " + name + ": ");
-        this.colour = input.nextLine();
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     @Override
-    public void setAge() {
-        System.out.print("Enter the new age for " + name + ": ");
-        this.age = input.nextInt();
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
-    public void setWeight() {
-        System.out.print("Enter the new weight for " + name + " in grams: ");
-        this.weight = input.nextDouble();
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 
-    @Override
-    public void setTypeTrait() {
-        System.out.print("Enter the new burrow depth in cm for " + name + ": ");
-        this.burrowDepth = input.nextInt();
+    public void setBurrowDepth(int burrowDepth) {
+        this.burrowDepth = burrowDepth;
     }
 
 //    slitherable interface

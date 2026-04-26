@@ -1,11 +1,6 @@
-import java.util.Scanner;
-
 public class Crocodile extends Animal implements Slitherable, Swimable{
 //    instance variable
-    private double biteForce = 0;
-
-//    scanner setup
-    Scanner input = new Scanner(System.in);
+    private double biteForce;
 
 //    constructor
     Crocodile(String name, String colour, int age, double weight, double biteForce) {
@@ -17,7 +12,7 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
 
     @Override
     public String makeSound() {
-        return "Hsssss, I am" + name + " a " + age + " year old " + this.getClass().getSimpleName();
+        return "Hsssss, I am " + name + " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
     @Override
@@ -40,14 +35,14 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
         return weight;
     }
 
-    @Override
-    public void getTypeTrait() {
+    public void getBiteForce() {
         System.out.println(biteForce + " PSI");
     }
 
     public void displayDetails() {
 
         String details = "Name: " + name + "\n" +
+                "Animal type: " + this.getClass().getSimpleName() + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
                 "Weight: " + weight + "kg\n" +
@@ -59,34 +54,28 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
 //    setters
 
     @Override
-    public void setName() {
-        System.out.print("Enter a new name for the crocodile: ");
-        this.name = input.nextLine();
+    public void setName(String name) {
+        this.name = name;
 
     }
 
     @Override
-    public void setColour() {
-        System.out.print("Enter a new colour for " + name + ": ");
-        this.colour = input.nextLine();
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     @Override
-    public void setAge() {
-        System.out.print("Enter a new age for " + name + ": ");
-        this.age = input.nextInt();
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
-    public void setWeight() {
-        System.out.print("Enter a new weight for " + name + " in kg: ");
-        this.weight = input.nextDouble();
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 
-    @Override
-    public void setTypeTrait() {
-        System.out.print("Enter a new bite force for " + name + " in PSI: ");
-        this.biteForce = input.nextDouble();
+    public void setBiteForce(Double biteForce) {
+        this.biteForce = biteForce;
     }
 
 //    slitherable interface

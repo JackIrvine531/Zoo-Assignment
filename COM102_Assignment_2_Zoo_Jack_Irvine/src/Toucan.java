@@ -1,11 +1,6 @@
-import java.util.Scanner;
-
 public class Toucan extends Animal implements Flyable {
 //    instance variable
-    private double beakLength = 0;
-
-//    scanner setup
-    Scanner input = new Scanner(System.in);
+    private double beakLength;
 
 //    constructor
     Toucan(String name, String colour, int age, double weight, double beakLength){
@@ -42,14 +37,14 @@ public class Toucan extends Animal implements Flyable {
         return weight;
     }
 
-    @Override
-    public void getTypeTrait() {
+    public void getBeakLength() {
         System.out.println(beakLength + "cm");
     }
 
     public void displayDetails() {
 
         String details = "Name: " + name + "\n" +
+                "Animal type: " + this.getClass().getSimpleName() + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
                 "Weight: " + weight + "g\n" +
@@ -60,33 +55,27 @@ public class Toucan extends Animal implements Flyable {
 
 //    setters
     @Override
-    public void setName() {
-        System.out.print("Enter the new name for the toucan: ");
-        this.name = input.nextLine();
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
-    public void setColour() {
-        System.out.print("Enter the new colour for " + name + ": ");
-        this.colour = input.nextLine();
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     @Override
-    public void setAge() {
-        System.out.print("Enter the new age for " + name + ": ");
-        this.age = input.nextInt();
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
-    public void setWeight() {
-        System.out.print("Enter the new weight for " + name + " in grams: ");
-        this.weight = input.nextDouble();
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 
-    @Override
-    public void setTypeTrait() {
-        System.out.print("Enter the new beak length for " + name + " in cm: ");
-        this.beakLength = input.nextDouble();
+    public void setBeakLength(double beakLength) {
+        this.beakLength = beakLength;
     }
 
 //    flyable interface

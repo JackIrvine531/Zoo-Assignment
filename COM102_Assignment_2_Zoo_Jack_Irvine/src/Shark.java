@@ -1,12 +1,7 @@
-import java.util.Scanner;
-
 public class Shark extends Animal implements Swimable {
 
 //    instance variable
-    private int numTeeth = 0;
-
-//    scanner setup
-    Scanner input = new Scanner(System.in);
+    private int numTeeth;
 
 //    constructor
     Shark(String name, String colour, int age, double weight, int numTeeth){
@@ -18,7 +13,7 @@ public class Shark extends Animal implements Swimable {
 
     @Override
     public String makeSound() {
-        return "blub, blub, I am" + name +
+        return "blub, blub, I am " + name +
                 " a " + age + " year old " + this.getClass().getSimpleName();
     }
 
@@ -42,14 +37,14 @@ public class Shark extends Animal implements Swimable {
         return weight;
     }
 
-    @Override
-    public void getTypeTrait() {
+    public void getNumTeeth() {
         System.out.println(numTeeth);
     }
 
     public void displayDetails() {
 
         String details = "Name: " + name + "\n" +
+                "Animal type: " + this.getClass().getSimpleName() + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
                 "Weight: " + weight + "kg\n" +
@@ -61,34 +56,28 @@ public class Shark extends Animal implements Swimable {
 
 //    setters
     @Override
-    public void setName() {
-        System.out.print("Enter the new name for the shark: ");
-        this.name = input.nextLine();
+    public void setName(String name) {
+        this.name = name;
 
     }
 
     @Override
-    public void setColour() {
-        System.out.print("Enter the new colour for " + name + ": ");
-        this.colour = input.nextLine();
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     @Override
-    public void setAge() {
-        System.out.print("Enter the new age for " + name + ": ");
-        this.age = input.nextInt();
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
-    public void setWeight() {
-        System.out.print("Enter the new weight for " + name + " in kg: ");
-        this.weight = input.nextDouble();
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 
-    @Override
-    public void setTypeTrait() {
-        System.out.print("Enter the new number of teeth for " + name + ": ");
-        this.numTeeth = input.nextInt();
+    public void setNumTeeth(int numTeeth) {
+        this.numTeeth = numTeeth;
     }
 
 //    swimable interface
