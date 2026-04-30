@@ -1,19 +1,17 @@
-public class Cafe extends Store{
+public class DonationStand extends Store {
 
-    public Cafe() {
-        super("Cafe");
+    //constructor
+    public DonationStand() {
+        super("Donation Stand");
 
-        items.add(new Item("Coffee", 4.5));
-        items.add(new Item("Tea", 3));
-        items.add(new Item("Sandwich", 4.5));
-        items.add(new Item("Toastie", 5));
-        items.add(new Item("Wrap", 4.5));
-        items.add(new Item("Kids Zoo Meal", 4));
-        items.add(new Item("Adult Zoo Meal", 6));
-        items.add(new Item("Bottle of water", 2.5));
-        items.add(new Item("Juice box", 4.5));
-
+        items.add(new Item("£5 Donation", 5));
+        items.add(new Item("£10 Donation", 10));
+        items.add(new Item("£20 Donation", 20));
+        items.add(new Item("£50 Donation", 50));
+        items.add(new Item("£100 Donation", 100));
     }
+
+
 
     @Override
     public void displayItems() {
@@ -47,4 +45,5 @@ public class Cafe extends Store{
     public int getItemCount() {
         return items.size();
     }
+
 }//class

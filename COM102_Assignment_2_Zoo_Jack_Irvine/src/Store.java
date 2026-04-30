@@ -13,5 +13,6 @@ public abstract class Store {
 
     public abstract void displayItems();
     public abstract void buyItem(int index, Visitor visitor);
+    public abstract int getItemCount();
 
 }//class

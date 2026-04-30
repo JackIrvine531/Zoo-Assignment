@@ -48,4 +48,9 @@ public class GiftShop extends Store {
         }
     }
 
+    @Override
+    public int getItemCount() {
+        return items.size();
+    }
+
 }//class

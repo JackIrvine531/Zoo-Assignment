@@ -9,6 +9,7 @@ public class ZooManager {
 
         Zoo myZoo = new Zoo("Belfast city zoo");
         Zookeeper keeper = new Zookeeper("John zoo");
+        Visitor visitor = new Visitor(200);
         //zoo report class??
         int choice;
 
@@ -79,7 +80,7 @@ public class ZooManager {
                     break;
 
                 case 11:
-                    getZooStoreMenu();
+                    getZooStoreMenu(visitor);
                     break;
             }
 
@@ -283,9 +284,9 @@ public class ZooManager {
             System.out.print(inputPrompt);
             String input = userInput.nextLine().trim().toLowerCase();
 
-            if (input.equals("true")) {
+            if (input.equals("true") || input.equalsIgnoreCase("y") || input.equals("yes")) {
                 return true;
-            } else if (input.equals("false")) {
+            } else if (input.equals("false") || input.equalsIgnoreCase("n") || input.equals("no")) {
                 return false;
             } else {
                 System.out.println("Invalid input, please enter true or false ");
@@ -532,6 +533,9 @@ public class ZooManager {
 
             choice = getValidMenuChoice("Enter choice: ", 0, 9);
 
+            //menu loop
+            boolean repeat;
+
             switch (choice) {
                 case 0:
                     break;
@@ -584,25 +588,77 @@ public class ZooManager {
         } while (choice !=0);
     }
 
-    private static void getZooStoreMenu() {
+    private static void getZooStoreMenu(Visitor visitor) {
+        GiftShop giftShop = new GiftShop();
+        Cafe cafe = new Cafe();
+        DonationStand donationStand = new DonationStand();
+
         int choice;
         do {
             System.out.println("---------");
             System.out.println("--- Which store do you want to visit?");
             System.out.println("---------");
-            System.out.println("1. The Cafe");
-            System.out.println("2. The Gift shop");
-            System.out.println("3. The Donation stand");
+            System.out.println("1. Visit the Cafe");
+            System.out.println("2. Visit the Gift shop");
+            System.out.println("3. Visit the Donation stand");
+            System.out.println("4. Check your balance");
+            System.out.println("5. Add funds to your balance");
             System.out.println("0. Return to Main Menu");
 
 
-            choice = getValidMenuChoice("Enter Choice: ", 0, 3);
+            choice = getValidMenuChoice("Enter Choice: ", 0, 5);
 
             switch (choice) {
                 case 1:
+                    visitStore(cafe, visitor);
+                    break;
+
+                case 2:
+                    visitStore(giftShop, visitor);
+                    break;
+
+                case 3:
+                    visitStore(donationStand, visitor);
+                    break;
+
+                case 4:
+                    System.out.println("---------");
+                    System.out.println("Balance: " + visitor.getBalance());
+                    System.out.println("---------");
+                    break;
+
+                case 5:
+                    double amount = getValidDouble("Enter amount to add: ");
+                    visitor.deposit(amount);
+                    break;
 
             }
         }while (choice !=0);
-    }
+    }//get zoo store menu
+
+    public static void visitStore(Store store, Visitor visitor) {
+
+        int choice;
+
+        do {
+            System.out.println("---------");
+            store.displayItems();
+            System.out.println("0. Return to Stores Menu");
+
+            choice = getValidMenuChoice("Select item to buy: ", 0, store.getItemCount());
+
+            if (choice ==0) {
+                return;
+            }
+
+            store.buyItem(choice - 1, visitor);
+
+            boolean repeat = getValidBoolean("Buy another item? (yes/no): ");
+
+            if (!repeat) {
+                return;
+            }
+        } while (true);
+    }// visit store loop
 
 }//class
