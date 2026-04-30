@@ -91,6 +91,21 @@ public class Caecilian extends Animal implements Slitherable {
     }
 
     @Override
+    public void bask() {
+        System.out.println(name + " is basking in the sun");
+    }
+
+    @Override
+    public void hiss() {
+        System.out.println(name + " is hissing");
+    }
+
+    @Override
+    public void ambush() {
+        System.out.println(name + " is setting an ambush for prey");
+    }
+
+    @Override
     public void checkSkinConditions() {
         System.out.println(name + "'s skin is in good condition");
     }

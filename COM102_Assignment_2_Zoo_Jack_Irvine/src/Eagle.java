@@ -90,6 +90,21 @@ public class Eagle extends Animal implements Flyable{
     }
 
     @Override
+    public void chirp() {
+        System.out.println(name + " is chirping");
+    }
+
+    @Override
+    public void roost() {
+        System.out.println(name + " is roosting");
+    }
+
+    @Override
+    public void cleanSelf() {
+        System.out.println(name + " is cleaning itself");
+    }
+
+    @Override
     public void performWingCheck() {
         System.out.println(name + "'s wings are in good condition");
     }

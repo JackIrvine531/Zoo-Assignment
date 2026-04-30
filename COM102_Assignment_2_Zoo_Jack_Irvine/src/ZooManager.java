@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class ZooManager {
     private static final Scanner userInput = new Scanner(System.in);
@@ -23,9 +23,10 @@ public class ZooManager {
             System.out.println("6. Display all Animals Details");
             System.out.println("7. Display Zoo Report");
             System.out.println("8. Preform Daily Care");
+            System.out.println("9. View Animal Enclosure");
             System.out.println("0. Exit the program");
 
-            choice = getValidMenuChoice("Enter choice: ", 0, 8);
+            choice = getValidMenuChoice("Enter choice: ", 0, 9);
 
             switch (choice) {
                 case 0:
@@ -65,6 +66,10 @@ public class ZooManager {
 
                 case 8:
                     keeper.preformDailyCare(myZoo.getAnimals());
+                    break;
+
+                case 9:
+                    viewEnclosureMenu(myZoo);
                     break;
             }
 
@@ -298,5 +303,203 @@ public class ZooManager {
             }//try catch
         }//while
     }//get valid menu choice number.
+
+//    view animal encloser
+    private static void viewEnclosureMenu(Zoo zoo) {
+        int choice;
+        do {
+            System.out.println("---------");
+            System.out.println("--- Enclosure Menu ---");
+            System.out.println("Choose a enclosure to view");
+            System.out.println("---------");
+            System.out.println("1. Eagle");
+            System.out.println("2. Toucan");
+            System.out.println("3. Owl");
+            System.out.println("4. Hippo");
+            System.out.println("5. Shark");
+            System.out.println("6. Penguin");
+            System.out.println("7. Crocodile");
+            System.out.println("8. Python");
+            System.out.println("9. Caecilian");
+            System.out.println("0. return to main menu");
+
+            choice = getValidMenuChoice("Enter choice: ", 0, 9);
+
+            Class<?> selectedType = null;
+
+            switch (choice) {
+                case 0:
+                    break;
+
+                case 1:
+                    selectedType = Eagle.class;
+                    break;
+
+                case 2:
+                    selectedType = Toucan.class;
+                    break;
+
+                case 3:
+                    selectedType = Owl.class;
+                    break;
+
+                case 4:
+                    selectedType = Hippo.class;
+                    break;
+
+                case 5:
+                    selectedType = Shark.class;
+                    break;
+
+                case 6:
+                    selectedType = Penguin.class;
+                    break;
+
+                case 7:
+                    selectedType = Crocodile.class;
+                    break;
+
+                case 8:
+                    selectedType = Python.class;
+                    break;
+
+                case 9:
+                    selectedType = Caecilian.class;
+                    break;
+
+            }
+
+            ArrayList<Animal> enclosure = zoo.getAnimalType(selectedType);
+
+//            if no animals of that type
+            if (enclosure.isEmpty()) {
+                System.out.println("No animals in this enclosure");
+                return;
+            }
+
+//            get random animals from enclosure
+            Collections.shuffle(enclosure);
+
+//            get random amount of animals from the enclosure
+            Random randNum = new Random();
+            int numberOfAnimals = randNum.nextInt(enclosure.size()) + 1;
+
+            System.out.println("---------");
+            for (int i = 0; i<numberOfAnimals; i++) {
+                Animal a = enclosure.get(i);
+
+//                get interface methods
+                ArrayList<String> actions = new ArrayList<>();
+                if (a instanceof Swimable) {
+                    actions.add("swim");
+                    actions.add("dive");
+                    actions.add("rise");
+                    actions.add("hide");
+                    actions.add("unhide");
+                }
+                if (a instanceof Flyable) {
+                    actions.add("fly");
+                    actions.add("land");
+                    actions.add("chirp");
+                    actions.add("roost");
+                    actions.add("cleanSelf");
+                }
+                if (a instanceof Slitherable) {
+                    actions.add("slither");
+                    actions.add("shedSkin");
+                    actions.add("bask");
+                    actions.add("hiss");
+                    actions.add("ambush");
+                }
+
+                if (actions.isEmpty()) {
+                    System.out.println("actions not working in zoo manager");
+                } else {
+//                    picks random action
+                    String action = actions.get(randNum.nextInt(actions.size()));
+
+                    switch (action) {
+                        case "swim":
+                            assert a instanceof Swimable;
+                            ((Swimable) a).swim();
+                            break;
+
+                        case "dive":
+                            assert a instanceof Swimable;
+                            ((Swimable) a).dive();
+                            break;
+
+                        case "rise":
+                            assert a instanceof Swimable;
+                            ((Swimable) a).rise();
+                            break;
+
+                        case "hide":
+                            assert a instanceof Swimable;
+                            ((Swimable) a).hide();
+                            break;
+
+                        case "unhide":
+                            assert a instanceof Swimable;
+                            ((Swimable) a).unhide();
+
+                        case "fly":
+                            assert a instanceof Flyable;
+                            ((Flyable) a).fly();
+                            break;
+
+                        case "land":
+                            assert a instanceof Flyable;
+                            ((Flyable) a).land();
+                            break;
+
+                        case "chirp":
+                            assert a instanceof Flyable;
+                            ((Flyable) a).chirp();
+                            break;
+
+                        case "roost":
+                            assert a instanceof Flyable;
+                            ((Flyable) a).roost();
+                            break;
+
+                        case "cleanSelf":
+                            assert a instanceof Flyable;
+                            ((Flyable) a).cleanSelf();
+                            break;
+
+                        case "slither":
+                            assert a instanceof Slitherable;
+                            ((Slitherable) a).slither();
+                            break;
+
+                        case "shedSkin":
+                            assert a instanceof Slitherable;
+                            ((Slitherable) a).shedSkin();
+                            break;
+
+                        case "bask":
+                            assert a instanceof Slitherable;
+                            ((Slitherable) a).bask();
+                            break;
+
+                        case "hiss":
+                            assert a instanceof Slitherable;
+                            ((Slitherable) a).hiss();
+                            break;
+
+                        case "ambush":
+                            assert a instanceof Slitherable;
+                            ((Slitherable) a).ambush();
+                            break;
+                    }//switch
+                }//else
+
+
+            }//for
+
+        } while (choice != 0);
+
+    }// view enclosure
 
 }//class

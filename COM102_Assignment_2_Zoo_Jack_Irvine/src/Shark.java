@@ -93,6 +93,21 @@ public class Shark extends Animal implements Swimable {
     }
 
     @Override
+    public void rise() {
+        System.out.println(name + " has risen in the water");
+    }
+
+    @Override
+    public void hide() {
+        System.out.println(name + " has hidden from view");
+    }
+
+    @Override
+    public void unhide() {
+        System.out.println(name + " has returned into view after hiding");
+    }
+
+    @Override
     public void checkWaterConditions() {
         System.out.println("The water in " + name + "'s habitat is in good condition");
     }

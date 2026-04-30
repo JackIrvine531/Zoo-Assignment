@@ -91,6 +91,11 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
     }
 
     @Override
+    public void bask() {
+        System.out.println(name + " is basking in the sun");
+    }
+
+    @Override
     public void checkSkinConditions() {
         System.out.println(name + "'s skin is in good condition");
     }
@@ -104,7 +109,33 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
 
     @Override
     public void dive() {
-        System.out.println(name + " has dove underwater");
+        System.out.println(name + " has went deeper underwater");
+    }
+
+    @Override
+    public void rise() {
+        System.out.println(name + " has rose up in the water a bit");
+    }
+
+
+    @Override
+    public void hiss() {
+        System.out.println(name + " has started to hiss");
+    }
+
+    @Override
+    public void ambush() {
+        System.out.println(name + " is laying in ambush");
+    }
+
+    @Override
+    public void hide() {
+            System.out.println(name + " is hidden from sight");
+    }
+
+    @Override
+    public void unhide() {
+        System.out.println(name + " has returned into view after hiding for a bit");
     }
 
     @Override

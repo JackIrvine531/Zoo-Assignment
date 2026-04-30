@@ -87,7 +87,22 @@ public class Hippo extends Animal implements Swimable {
 
     @Override
     public void dive() {
-        System.out.println(name + " has dived under the water");
+        System.out.println(name + " has dived a bit deeper under the water");
+    }
+
+    @Override
+    public void rise() {
+        System.out.println(name + " has risen in the water a bit");
+    }
+
+    @Override
+    public void hide() {
+        System.out.println(name + " has hidden from view");
+    }
+
+    @Override
+    public void unhide() {
+        System.out.println(name + " has returned into view after hiding a bit");
     }
 
     @Override

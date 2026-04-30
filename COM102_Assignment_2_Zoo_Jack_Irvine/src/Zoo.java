@@ -209,6 +209,18 @@ public class Zoo {
         return zooName;
     }
 
+//    get animal type
+    public ArrayList<Animal> getAnimalType(Class<?> type) {
+        ArrayList<Animal> results = new ArrayList<>();
+
+        for (Animal a : animals) {
+            if (type.isInstance(a)) {
+                results.add(a);
+            }
+        }
+        return results;
+    }
+
 
 
 }//class
