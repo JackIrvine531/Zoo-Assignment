@@ -25,9 +25,10 @@ public class ZooManager {
             System.out.println("8. Preform Daily Care");
             System.out.println("9. View Animal Enclosure");
             System.out.println("10. Get Animal Facts");
+            System.out.println("11. Visit Zoo stores");
             System.out.println("0. Exit the program");
 
-            choice = getValidMenuChoice("Enter choice: ", 0, 10);
+            choice = getValidMenuChoice("Enter choice: ", 0, 11);
 
             switch (choice) {
                 case 0:
@@ -75,6 +76,10 @@ public class ZooManager {
 
                 case 10:
                     getAnimalFactsMenu();
+                    break;
+
+                case 11:
+                    getZooStoreMenu();
                     break;
             }
 
@@ -577,6 +582,27 @@ public class ZooManager {
                     break;
             }
         } while (choice !=0);
+    }
+
+    private static void getZooStoreMenu() {
+        int choice;
+        do {
+            System.out.println("---------");
+            System.out.println("--- Which store do you want to visit?");
+            System.out.println("---------");
+            System.out.println("1. The Cafe");
+            System.out.println("2. The Gift shop");
+            System.out.println("3. The Donation stand");
+            System.out.println("0. Return to Main Menu");
+
+
+            choice = getValidMenuChoice("Enter Choice: ", 0, 3);
+
+            switch (choice) {
+                case 1:
+
+            }
+        }while (choice !=0);
     }
 
 }//class
