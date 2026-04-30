@@ -8,9 +8,12 @@ public class ZooManager {
 
 
         Zoo myZoo = new Zoo("Belfast city zoo");
-        Zookeeper keeper = new Zookeeper("John zoo");
+        myZoo.loadZooDetails();
+        myZoo.loadAnimalDetails();
+
+        Zookeeper keeper = new Zookeeper("John ZooKeeper");
         Visitor visitor = new Visitor(200);
-        //zoo report class??
+
         int choice;
 
         do {
@@ -33,6 +36,10 @@ public class ZooManager {
 
             switch (choice) {
                 case 0:
+                    System.out.println("Saving data...");
+                    myZoo.saveZooDetails();
+                    myZoo.saveAnimalDetails();
+                    System.out.println("Data saved, Exiting program");
                     break;
 
                 case 1:

@@ -1,4 +1,8 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Zoo {
 
@@ -221,6 +225,234 @@ public class Zoo {
         return results;
     }
 
+    //save zoo details
+    public void saveZooDetails() {
+        try (FileWriter writer = new FileWriter("zooDetails.txt")) {
 
+            writer.write("Zoo Name: " + zooName + "\n");
+            writer.write("Total Animals: " + animals.size() + "\n");
+
+        } catch (IOException e) {
+            System.out.println("Error saving zoo details");
+        }
+    }
+
+    //save animal details
+    public void saveAnimalDetails() {
+        try (FileWriter writer = new FileWriter("AnimalDetails.txt")) {
+            for (Animal a : animals) {
+
+                //skip invalid animals
+                if (a == null || !a.isValid()) {
+                    continue;
+                } else {
+                    writer.write("Type: " + a.getClass().getSimpleName() + "\n");
+                    writer.write("Name: " + a.getName() + "\n");
+                    writer.write("Age: " + a.getAge() + "\n");
+                    writer.write("Colour: " + a.getColour() + "\n");
+                    writer.write("Weight: " + a.getWeight() + "\n");
+
+                    if (a instanceof Eagle) {
+                        writer.write("WingSpan: " + ((Eagle) a).getWingSpan() + "\n");
+                    }
+
+                    if (a instanceof Toucan) {
+                        writer.write("Beak Length: " + ((Toucan) a).getBeakLength() + "\n");
+                    }
+
+                    if (a instanceof Owl) {
+                        writer.write("Hearing Range: " + ((Owl) a).getHearingRange() + "\n");
+                    }
+
+                    if (a instanceof Hippo) {
+                        writer.write("Hungry Hippo: " + ((Hippo) a).getHungryHippo() + "\n");
+                    }
+
+                    if (a instanceof Shark) {
+                        writer.write("Num Teeth: " + ((Shark) a).getNumTeeth() + "\n");
+                    }
+
+                    if (a instanceof Penguin) {
+                        writer.write("Swim Speed: " + ((Penguin) a).getSwimSpeed() + "\n");
+                    }
+
+                    if (a instanceof Crocodile) {
+                        writer.write("Bite Force: " + ((Crocodile) a).getBiteForce() + "\n");
+                    }
+
+                    if (a instanceof Python) {
+                        writer.write("Tongue Flicks Per Minute: " + ((Python) a).getTongueFlicksPerMin() + "\n");
+                    }
+
+                    if (a instanceof Caecilian) {
+                        writer.write("Burrow Depth: " + ((Caecilian) a).getBurrowDepth() + "\n");
+                    }
+
+                    writer.write("---------");
+                }//if else
+            } //for
+
+        } catch (IOException e) {
+            System.out.println("Error saving animal details");
+        }
+    }// save animal details
+
+    //load zoo details
+    public void loadZooDetails() {
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("zooDetails.txt"))) {
+            String line;
+
+            while((line = reader.readLine()) != null) {
+
+                if (line.startsWith("Zoo Name: ")) {
+                    this.zooName = line.substring(10);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("No previous zoo data found");
+        }//try catch
+    }//load zoo details
+
+    public void loadAnimalDetails() {
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("AnimalDetails.txt"))) {
+
+            String line;
+
+            String type = "";
+            String name = "";
+            String colour = "";
+            int age = 0;
+            double weight = 0;
+
+            //instance variables
+            double wingSpan = 0;
+            double beakLength = 0;
+            int hearingRange = 0;
+            boolean hungryHippo = false;
+            int numTeeth = 0;
+            int swimSpeed = 0;
+            double biteForce = 0;
+            int tongueFlicksPerMin = 0;
+            int burrowDepth = 0;
+
+            while ((line = reader.readLine()) !=null) {
+
+                if (line.startsWith("Type: ")) {
+                    type = line.substring(6);
+                } else if (line.startsWith("Name: ")) {
+                    name = line.substring(6);
+
+                } else if (line.startsWith("Age: ")) {
+                    age = Integer.parseInt(line.substring(5));
+
+                } else if (line.startsWith("Colour: ")) {
+                    colour = line.substring(8);
+
+                } else if (line.startsWith("Weight: ")) {
+                    weight = Double.parseDouble(line.substring(8));
+
+                } else if (line.startsWith("WingSpan: ")) {
+                    wingSpan = Double.parseDouble(line.substring(10));
+
+                } else if (line.startsWith("Beak Length: ")) {
+                    beakLength = Double.parseDouble(line.substring(13));
+
+                } else if (line.startsWith("Hearing Range: ")) {
+                    hearingRange = Integer.parseInt(line.substring(15));
+
+                } else if (line.startsWith("Hungry Hippo: ")) {
+                    hungryHippo = Boolean.parseBoolean(line.substring(15));
+
+                } else if (line.startsWith("Num Teeth: ")) {
+                    numTeeth = Integer.parseInt(line.substring(11));
+
+                } else if (line.startsWith("Swim Speed: ")) {
+                    swimSpeed = Integer.parseInt(line.substring(12));
+
+                } else if (line.startsWith("Bite Force: ")) {
+                    biteForce = Double.parseDouble(line.substring(12));
+
+                } else if (line.startsWith("Tongue Flicks Per Minute: ")) {
+                    tongueFlicksPerMin = Integer.parseInt(line.substring(26));
+
+                } else if (line.startsWith("Burrow Depth: ")) {
+                    burrowDepth = Integer.parseInt(line.substring(14));
+
+                } else if (line.startsWith("---------")) {
+
+                    //create animal from loaded data
+                    Animal animal = null;
+
+                    switch (type) {
+
+                        case "Eagle":
+                            animal = new Eagle(name, colour, age, weight, wingSpan);
+                            break;
+
+                        case "Toucan":
+                            animal = new Toucan(name, colour, age, weight, beakLength);
+                            break;
+
+                        case "Owl":
+                            animal = new Owl(name, colour, age, weight, hearingRange);
+                            break;
+
+                        case "Hippo":
+                            animal = new Hippo(name, colour, age, weight, hungryHippo);
+                            break;
+
+                        case "Shark":
+                            animal = new Shark(name, colour, age, weight, numTeeth);
+                            break;
+
+                        case "Penguin":
+                            animal = new Penguin(name, colour, age, weight, swimSpeed);
+                            break;
+
+                        case "Crocodile":
+                            animal = new Crocodile(name, colour, age, weight, biteForce);
+                            break;
+
+                        case "Python":
+                            animal = new Python(name, colour, age, weight, tongueFlicksPerMin);
+                            break;
+
+                        case "Caecilian":
+                            animal = new Caecilian(name, colour, age, weight, burrowDepth);
+                            break;
+                    }
+
+                    // add valid animals
+                    if (animal != null && animal.isValid()) {
+                        animals.add(animal);
+                    }
+
+                    //reset for next animal
+                    type = "";
+                    name = "";
+                    colour = "";
+                    age = 0;
+                    weight = 0;
+
+                    //instance variables
+                    wingSpan = 0;
+                    beakLength = 0;
+                    hearingRange = 0;
+                    hungryHippo = false;
+                    numTeeth = 0;
+                    swimSpeed = 0;
+                    biteForce = 0;
+                    tongueFlicksPerMin = 0;
+                    burrowDepth = 0;
+
+                }// else ifs
+            }// while
+
+        } catch (IOException e) {
+            System.out.println("No animal data found");
+        }//try catch
+    }//load animal details
 
 }//class

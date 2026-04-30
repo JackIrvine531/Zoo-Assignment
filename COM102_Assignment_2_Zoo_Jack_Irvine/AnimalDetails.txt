@@ -1,0 +1,7 @@
+Type: Eagle
+Name: Jasper
+Age: 6
+Colour: black
+Weight: 6.0
+WingSpan: 1.6
+---------

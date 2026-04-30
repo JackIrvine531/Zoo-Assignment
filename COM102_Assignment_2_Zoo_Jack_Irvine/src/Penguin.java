@@ -37,8 +37,8 @@ public class Penguin extends Animal implements Swimable {
     }
 
 
-    public void getSwimSpeed() {
-        System.out.println(swimSpeed + " MPH");
+    public int getSwimSpeed() {
+        return swimSpeed;
     }
 
     public void displayDetails() {
@@ -83,6 +83,14 @@ public class Penguin extends Animal implements Swimable {
     @Override
     public void setWeight(Double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public boolean isValid() {
+        return name != null && !name.trim().isEmpty()
+                && colour != null && !colour.trim().isEmpty()
+                && age> 0
+                && weight > 0;
     }
 
 

@@ -38,8 +38,8 @@ public class Owl extends Animal implements Flyable {
     }
 
 
-    public void getHearingRange() {
-        System.out.println(hearingRange + " Meters");
+    public int getHearingRange() {
+        return hearingRange;
     }
 
     public void displayDetails() {
@@ -84,6 +84,14 @@ public class Owl extends Animal implements Flyable {
     @Override
     public void setWeight(Double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public boolean isValid() {
+        return name != null && !name.trim().isEmpty()
+                && colour != null && !colour.trim().isEmpty()
+                && age> 0
+                && weight > 0;
     }
 
     public void setHearingRange(int hearingRange) {

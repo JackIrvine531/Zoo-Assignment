@@ -37,8 +37,8 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
         return weight;
     }
 
-    public void getBiteForce() {
-        System.out.println(biteForce + " PSI");
+    public double getBiteForce() {
+        return biteForce;
     }
 
     public void displayDetails() {
@@ -88,7 +88,15 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
         this.weight = weight;
     }
 
-    public void setBiteForce(Double biteForce) {
+    @Override
+    public boolean isValid() {
+        return name != null && !name.trim().isEmpty()
+                && colour != null && !colour.trim().isEmpty()
+                && age> 0
+                && weight > 0;
+    }
+
+    public void setBiteForce(double biteForce) {
         this.biteForce = biteForce;
     }
 

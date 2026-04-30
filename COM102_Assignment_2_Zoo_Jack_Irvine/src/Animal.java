@@ -28,4 +28,7 @@ public abstract class Animal {
     public abstract void setAge(int age);
     public abstract void setWeight(Double weight);
 
+    //is valid for saving to disk
+    public abstract boolean isValid();
+
 }//class

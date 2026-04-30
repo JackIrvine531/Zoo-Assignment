@@ -39,8 +39,8 @@ public class Toucan extends Animal implements Flyable {
         return weight;
     }
 
-    public void getBeakLength() {
-        System.out.println(beakLength + "cm");
+    public double getBeakLength() {
+        return beakLength;
     }
 
     public void displayDetails() {
@@ -85,6 +85,14 @@ public class Toucan extends Animal implements Flyable {
     @Override
     public void setWeight(Double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public boolean isValid() {
+        return name != null && !name.trim().isEmpty()
+                && colour != null && !colour.trim().isEmpty()
+                && age> 0
+                && weight > 0;
     }
 
     public void setBeakLength(double beakLength) {

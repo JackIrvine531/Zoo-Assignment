@@ -39,8 +39,8 @@ public class Shark extends Animal implements Swimable {
         return weight;
     }
 
-    public void getNumTeeth() {
-        System.out.println(numTeeth);
+    public int getNumTeeth() {
+        return numTeeth;
     }
 
     public void displayDetails() {
@@ -87,6 +87,14 @@ public class Shark extends Animal implements Swimable {
     @Override
     public void setWeight(Double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public boolean isValid() {
+        return name != null && !name.trim().isEmpty()
+                && colour != null && !colour.trim().isEmpty()
+                && age> 0
+                && weight > 0;
     }
 
     public void setNumTeeth(int numTeeth) {

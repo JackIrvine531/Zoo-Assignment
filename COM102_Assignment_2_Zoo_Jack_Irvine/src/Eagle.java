@@ -37,8 +37,8 @@ public class Eagle extends Animal implements Flyable{
     }
 
 
-    public void getWingSpan() {
-        System.out.println(wingSpan + " Meters");
+    public double getWingSpan() {
+        return wingSpan;
     }
 
     public void displayDetails() {
@@ -86,6 +86,14 @@ public class Eagle extends Animal implements Flyable{
     @Override
     public void setWeight(Double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public boolean isValid() {
+        return name != null && !name.trim().isEmpty()
+                && colour != null && !colour.trim().isEmpty()
+                && age> 0
+                && weight > 0;
     }
 
     public void setWingSpan(double wingSpan) {

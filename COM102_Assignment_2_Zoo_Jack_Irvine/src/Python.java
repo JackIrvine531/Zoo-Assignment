@@ -37,8 +37,8 @@ public class Python extends Animal implements Slitherable {
         return weight;
     }
 
-    public void getTongueFlicksPerMin() {
-        System.out.println(tongueFlicksPerMin + " per minute");
+    public int getTongueFlicksPerMin() {
+        return tongueFlicksPerMin;
     }
 
     public void displayDetails() {
@@ -84,6 +84,14 @@ public class Python extends Animal implements Slitherable {
     @Override
     public void setWeight(Double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public boolean isValid() {
+        return name != null && !name.trim().isEmpty()
+                && colour != null && !colour.trim().isEmpty()
+                && age> 0
+                && weight > 0;
     }
 
     public void setTongueFlicksPerMin(int tongueFlicksPerMin) {
