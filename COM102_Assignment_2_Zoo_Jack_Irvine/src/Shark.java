@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Shark extends Animal implements Swimable {
 
 //    instance variable
@@ -53,8 +55,19 @@ public class Shark extends Animal implements Swimable {
         System.out.println(details);
     }
 
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "Sharks don't have bones, their skeletons are made of cartilage, the same flexible material in our nose and ears",
+                "Sharks constantly lose and replace teeth, some can go through 20,000+ teeth in a lifetime",
+                "Many sharks need to keep swimming to push water over their gills to breathe, though some species can rest on the seafloor",
+                "Despite their reputation sharks rarely attack humans, in fact you're far more likely to be killed by a cow than a shark"
+        };
+        return facts[new Random().nextInt(facts.length)];
+    }
 
-//    setters
+
+    //    setters
     @Override
     public void setName(String name) {
         this.name = name;

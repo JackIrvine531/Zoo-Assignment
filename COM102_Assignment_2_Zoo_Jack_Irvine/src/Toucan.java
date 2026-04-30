@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Toucan extends Animal implements Flyable {
 //    instance variable
     private double beakLength;
@@ -53,7 +55,18 @@ public class Toucan extends Animal implements Flyable {
         System.out.println(details);
     }
 
-//    setters
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "The Toco toucan has a massive beak, buts its surprisingly lightweight as its made of keratin with a honeycomb structure inside",
+                "A toucans beak isn't just for show, it helps regulate body temperature by realising heat like a natural radiator",
+                "Toucans sleep in tree holes and tuck their beaks under their wings curling up into a tiny ball to fit inside",
+                "Toucans spend most of their lives in tress and are not great flyers, preferring to hop between branches"
+        };
+        return facts[new Random().nextInt(facts.length)];
+    }
+
+    //    setters
     @Override
     public void setName(String name) {
         this.name = name;

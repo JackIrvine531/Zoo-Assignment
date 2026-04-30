@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Owl extends Animal implements Flyable {
 
 //    instance variable
@@ -49,6 +51,17 @@ public class Owl extends Animal implements Flyable {
                 "Weight: " + weight + "kg\n" +
                 "Hearing Range: " + hearingRange + "\n";
         System.out.println(details);
+    }
+
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "Owls can rotate their heads up to 270 degrees thanks to extra neck vertebrae and special blood vessels",
+                "An owls feathers are specially adapted to muffle sound making them almost completely silent when flying",
+                "Owls have excellent low-light vision, but their eyes are so large and fixed they cannot move them, which is why they rely on head rotation",
+                "Despite their reputation for being wise, they are not especially intelligent compared to other birds such as crows or parrots"
+        };
+        return facts[new Random().nextInt(facts.length)];
     }
 
 //    setters

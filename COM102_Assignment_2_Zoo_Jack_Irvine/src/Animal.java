@@ -20,6 +20,7 @@ public abstract class Animal {
     public abstract int getAge();
     public abstract double getWeight();
     public abstract void displayDetails();
+    public abstract String getRandomFacts();
 
     //    setters
     public abstract void setName(String name);

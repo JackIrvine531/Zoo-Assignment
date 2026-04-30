@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Caecilian extends Animal implements Slitherable {
 //    instance variable
     private int burrowDepth;
@@ -50,6 +52,17 @@ public class Caecilian extends Animal implements Slitherable {
                 "Burrow Depth: " + burrowDepth + "\n";
 
         System.out.println(details);
+    }
+
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "Caecilians shed their skin so their young can eat it",
+                "Caecilians have very tiny eyes and don't see well",
+                "While they look similar to worms or snakes, Caecilians are limbless amphibians",
+                "Caecilians have a retractable sensory tentacles between their eyes and nostrils that can extend and retract"
+        };
+        return facts[new Random().nextInt(facts.length)];
     }
 
 //    setters

@@ -24,9 +24,10 @@ public class ZooManager {
             System.out.println("7. Display Zoo Report");
             System.out.println("8. Preform Daily Care");
             System.out.println("9. View Animal Enclosure");
+            System.out.println("10. Get Animal Facts");
             System.out.println("0. Exit the program");
 
-            choice = getValidMenuChoice("Enter choice: ", 0, 9);
+            choice = getValidMenuChoice("Enter choice: ", 0, 10);
 
             switch (choice) {
                 case 0:
@@ -70,6 +71,10 @@ public class ZooManager {
 
                 case 9:
                     viewEnclosureMenu(myZoo);
+                    break;
+
+                case 10:
+                    getAnimalFactsMenu();
                     break;
             }
 
@@ -501,5 +506,77 @@ public class ZooManager {
         } while (choice != 0);
 
     }// view enclosure
+
+    private static void getAnimalFactsMenu() {
+        int choice;
+        do {
+            System.out.println("---------");
+            System.out.println("--- Animal Fact Menu ---");
+            System.out.println("Choose which animal to get facts about");
+            System.out.println("---------");
+            System.out.println("1. Eagle");
+            System.out.println("2. Toucan");
+            System.out.println("3. Owl");
+            System.out.println("4. Hippo");
+            System.out.println("5. Shark");
+            System.out.println("6. Penguin");
+            System.out.println("7. Crocodile");
+            System.out.println("8. Python");
+            System.out.println("9. Caecilian");
+            System.out.println("0. return to main menu");
+
+            choice = getValidMenuChoice("Enter choice: ", 0, 9);
+
+            switch (choice) {
+                case 0:
+                    break;
+
+                case 1:
+                    Animal tempEagle = new Eagle("", "", 0,0,0);
+                    System.out.println(tempEagle.getRandomFacts());
+                    break;
+
+                case 2:
+                    Animal tempToucan = new Toucan("", "", 0,0,0);
+                    System.out.println(tempToucan.getRandomFacts());
+                    break;
+
+                case 3:
+                    Animal tempOwl = new Owl("", "", 0,0,0);
+                    System.out.println(tempOwl.getRandomFacts());
+                    break;
+
+                case 4:
+                    Animal tempHippo = new Hippo("", "", 0,0,true);
+                    System.out.println(tempHippo.getRandomFacts());
+                    break;
+
+                case 5:
+                    Animal tempShark = new Shark("", "", 0,0,0);
+                    System.out.println(tempShark.getRandomFacts());
+                    break;
+
+                case 6:
+                    Animal tempPenguin = new Penguin("", "", 0,0,0);
+                    System.out.println(tempPenguin.getRandomFacts());
+                    break;
+
+                case 7:
+                    Animal tempCroc = new Crocodile("", "", 0,0,0);
+                    System.out.println(tempCroc.getRandomFacts());
+                    break;
+
+                case 8:
+                    Animal tempPython = new Python("", "", 0,0,0);
+                    System.out.println(tempPython.getRandomFacts());
+                    break;
+
+                case 9:
+                    Animal tempCaecilian = new Caecilian("", "", 0,0,0);
+                    System.out.println(tempCaecilian.getRandomFacts());
+                    break;
+            }
+        } while (choice !=0);
+    }
 
 }//class

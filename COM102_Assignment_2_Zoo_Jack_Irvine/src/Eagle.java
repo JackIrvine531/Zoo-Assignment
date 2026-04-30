@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Eagle extends Animal implements Flyable{
 //    instance variable
     private double wingSpan;
@@ -49,6 +51,18 @@ public class Eagle extends Animal implements Flyable{
                 "Wingspan: " + wingSpan + "\n";
 
         System.out.println(details);
+    }
+
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "An eagles eyesight is 4-8 times better than humans, with some able to see a fish from over a mile away",
+                "Eagles can carry prey that weighs as much as their own body weight",
+                "Many eagles mate for life and return to the same nesting area every year",
+                "Eagles live on every continent except Antarctica",
+                "The sound a Bald eagle makes in US media is not the sound of a bald eagle but a red-tailed hawk, Bald eagles kind of sound like seagulls"
+        };
+        return facts[new Random().nextInt(facts.length)];
     }
 
 //    setters

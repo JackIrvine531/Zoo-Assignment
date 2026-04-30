@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Penguin extends Animal implements Swimable {
 //    instance variable
     private int swimSpeed;
@@ -51,7 +53,18 @@ public class Penguin extends Animal implements Swimable {
         System.out.println(details);
     }
 
-//    setters
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "Penguins when swimming can reach speeds of up to 24kmh/15MPH",
+                "Not all penguins live in Antarctica with species like the Galapagos penguin living near the equator",
+                "Penguins have a thick layer of fat and dense waterproof feathers to survive freezing conditions",
+                "The Emperor penguin can dive over 500 meters deep and stay underwater for more than 20 minutes"
+        };
+        return facts[new Random().nextInt(facts.length)];
+    }
+
+    //    setters
     @Override
     public void setName(String name) {
         this.name = name;

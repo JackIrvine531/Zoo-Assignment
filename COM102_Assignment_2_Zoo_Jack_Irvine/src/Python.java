@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Python extends Animal implements Slitherable {
 //    instance variable
     private int tongueFlicksPerMin;
@@ -49,6 +51,17 @@ public class Python extends Animal implements Slitherable {
                 "Tongue Flicks Per Minute: " + tongueFlicksPerMin + "\n";
 
         System.out.println(details);
+    }
+
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "Pythons can swallow prey whole, even animals as large as deer, and then go weeks or months without eating",
+                "The Reticulated python can grow over 6-7 meters (20+ feet), making it the longest snake in the world",
+                "Many species like the Burmese python have special pits along their jaws that detect heat, helping them hunt in complete darkness",
+                "Pythons still have tiny vestigial 'Legs' called spurs near their tails, remnants from their evolutionary ancestors"
+        };
+        return facts[new Random().nextInt(facts.length)];
     }
 
 //    setters

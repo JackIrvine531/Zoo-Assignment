@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Hippo extends Animal implements Swimable {
 //    instance variable
     private boolean hungryHippo;
@@ -50,6 +52,17 @@ public class Hippo extends Animal implements Swimable {
                 "Is it a Hungry Hungry Hippo: " + hungryHippo + "\n";
 
         System.out.println(details);
+    }
+
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "Hippos can't really swim, instead they walk or bounce along the riverbed",
+                "Hippos can run at around 30km/19MPH on land",
+                "Hippos are more closely related to whales and dolphins than to other land mammals",
+                "Hippos can sleep underwater, rising automatically to breathe without waking"
+        };
+        return facts[new Random().nextInt(facts.length)];
     }
 
 //    setters

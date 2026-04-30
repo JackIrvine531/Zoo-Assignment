@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Crocodile extends Animal implements Slitherable, Swimable{
 //    instance variable
     private double biteForce;
@@ -49,6 +51,18 @@ public class Crocodile extends Animal implements Slitherable, Swimable{
                 "Bite Force: " + biteForce + "\n";
 
         System.out.println(details);
+    }
+
+    @Override
+    public String getRandomFacts() {
+        String[] facts = {
+                "Crocodiles can go through thousands of teeth in its lifetime",
+                "The saltwater Crocodile has the one of the strongest recorded bite of any animal at over 3700 PSI",
+                "Crocodiles can't sweat, instead they regulate heat by opening their mouths",
+                "Crocodiles have a reflective layer in their eyes (like cats) that allow them to see very well in the dark",
+                "Crocodiles can hold their breath for 15 minutes normally or if they are staying still and conserving energy up to an hour"
+        };
+        return facts[new Random().nextInt(facts.length)];
     }
 
 //    setters
