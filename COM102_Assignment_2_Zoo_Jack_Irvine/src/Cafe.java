@@ -1,8 +1,10 @@
 public class Cafe extends Store{
 
+    //constructor
     public Cafe() {
         super("Cafe");
 
+        //items that will be displayed in the cafe menu
         items.add(new Item("Coffee", 4.5));
         items.add(new Item("Tea", 3));
         items.add(new Item("Sandwich", 4.5));
@@ -36,6 +38,7 @@ public class Cafe extends Store{
 
         Item item = items.get(index);
 
+        //pay for item if enough money
         if (visitor.withdraw(item.getPrice())) {
             System.out.println("You bought: " + item.getName());
         } else {

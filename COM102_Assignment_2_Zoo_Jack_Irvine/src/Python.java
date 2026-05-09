@@ -43,8 +43,9 @@ public class Python extends Animal implements Slitherable {
 
     public void displayDetails() {
 
-        String details = "Name: " + name + "\n" +
+        String details =
                 "Animal type: " + this.getClass().getSimpleName() + "\n" +
+                "Name: " + name + "\n" +
                 "Colour: " + colour + "\n" +
                 "Age: " + age + "\n" +
                 "Weight: " + weight + "kg\n" +

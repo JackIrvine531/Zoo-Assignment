@@ -5,3 +5,17 @@ Colour: black
 Weight: 6.0
 WingSpan: 1.6
 ---------
+Type: Toucan
+Name: Carrot
+Age: 7
+Colour: Orange
+Weight: 2.0
+Beak Length: 28.0
+---------
+Type: Owl
+Name: Willow
+Age: 18
+Colour: Black
+Weight: 2.0
+Hearing Range: 100
+---------

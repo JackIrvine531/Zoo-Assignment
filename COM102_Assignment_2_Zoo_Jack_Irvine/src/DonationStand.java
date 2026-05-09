@@ -4,6 +4,7 @@ public class DonationStand extends Store {
     public DonationStand() {
         super("Donation Stand");
 
+        //items that will be displayed and can be bought
         items.add(new Item("£5 Donation", 5));
         items.add(new Item("£10 Donation", 10));
         items.add(new Item("£20 Donation", 20));

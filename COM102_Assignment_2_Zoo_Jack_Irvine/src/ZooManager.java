@@ -3,6 +3,7 @@ import java.util.*;
 public class ZooManager {
     private static final Scanner userInput = new Scanner(System.in);
 
+    //program main method that starts up the main menu
     public static void main(String[] args){
 
 
@@ -99,7 +100,7 @@ public class ZooManager {
 
         int type;
         do {
-            System.out.println("--- add animal menu ---");
+            System.out.println("\n--- add animal menu ---");
             System.out.println("What type of animal do you want to add?");
             System.out.println("---------");
             System.out.println("Warning: Any data fields left blank when entering an animal will not be saved beyond the current session!");
@@ -192,7 +193,7 @@ public class ZooManager {
     private static void updateAnimalMenu(Zoo myZoo) {
         int menuChoice;
         do {
-            System.out.println("--- Update details menu ---");
+            System.out.println("\n--- Update details menu ---");
             System.out.println("1. Update details by name search");
             System.out.println("2. Display list of all animals");
             System.out.println("0. Exit Update details menu");
@@ -202,7 +203,7 @@ public class ZooManager {
             switch (menuChoice) {
                 case 1:
 
-                    String oldName = getValidString("Enter the name of the animal to update");
+                    String oldName = getValidString("Enter the name of the animal to update: ");
 
                     Animal searchAni = myZoo.findAnimal(oldName);
 
@@ -212,12 +213,56 @@ public class ZooManager {
                         return;
                     }else {
 //                      if animal exits now update it.
+
+                        //starting with common attributes
                         String newName = getValidString("Enter a new name: ");
                         String colour = getValidString("Enter new colour: ");
                         int age = getValidInt("Enter new age: ");
                         double weight = getValidDouble("Enter new weight: ");
 
-                        myZoo.updateDetails(newName, colour, age, weight);
+                        //instance variables
+                        Double wingspan = null;
+                        Double beakLength = null;
+                        Integer hearingRange = null;
+                        Boolean hungryHippo = null;
+                        Integer numTeeth = null;
+                        Integer swimSpeed = null;
+                        Double biteForce = null;
+                        Integer tongueFlicks = null;
+                        Integer burrowDepth = null;
+
+                        if (searchAni instanceof Eagle) {
+                            wingspan = getValidDouble("Enter new wing span in meters: ");
+
+                        } else if (searchAni instanceof Toucan) {
+                            beakLength = getValidDouble("Enter new beak length in cm: ");
+
+                        } else if (searchAni instanceof Owl) {
+                            hearingRange = getValidInt("Enter new hearing range in meters: ");
+
+                        } else if (searchAni instanceof Hippo) {
+                            hungryHippo = getValidBoolean("Enter if it is now a hungry hungry hippo (yes or no): ");
+
+                        } else if (searchAni instanceof Shark) {
+                            numTeeth = getValidInt("Enter the new number of teeth: ");
+
+                        } else if (searchAni instanceof Penguin) {
+                            swimSpeed = getValidInt("Enter new swim speed in MPH: ");
+
+                        } else if (searchAni instanceof Crocodile) {
+                            biteForce = getValidDouble("Enter new bite force in PSI: ");
+
+                        } else if (searchAni instanceof Python) {
+                            tongueFlicks = getValidInt("Enter new tongue flicks per minute: ");
+
+                        } else if (searchAni instanceof Caecilian) {
+                            burrowDepth = getValidInt("Enter new burrow depth in cm: ");
+
+                        }
+
+
+                        myZoo.updateDetails(oldName, newName, colour, age, weight, wingspan, beakLength, hearingRange,
+                                hungryHippo, numTeeth, swimSpeed, biteForce, tongueFlicks, burrowDepth);
                     }
 
                 case 2:
@@ -322,11 +367,11 @@ public class ZooManager {
         }//while
     }//get valid menu choice number.
 
-//    view animal encloser
+//    view animal encloser custom feature
     private static void viewEnclosureMenu(Zoo zoo) {
         int choice;
         do {
-            System.out.println("---------");
+            System.out.println("\n---------");
             System.out.println("--- Enclosure Menu ---");
             System.out.println("Choose a enclosure to view");
             System.out.println("---------");
@@ -342,6 +387,11 @@ public class ZooManager {
             System.out.println("0. return to main menu");
 
             choice = getValidMenuChoice("Enter choice: ", 0, 9);
+
+            //return to main menu, have this up here as if below the next step it will crash when exiting menu
+            if (choice == 0) {
+                return;
+            }
 
             Class<?> selectedType = null;
 
@@ -402,7 +452,7 @@ public class ZooManager {
             Random randNum = new Random();
             int numberOfAnimals = randNum.nextInt(enclosure.size()) + 1;
 
-            System.out.println("---------");
+            System.out.println("\n---------");
             for (int i = 0; i<numberOfAnimals; i++) {
                 Animal a = enclosure.get(i);
 
@@ -520,10 +570,11 @@ public class ZooManager {
 
     }// view enclosure
 
+    // get animal facts custom feature
     private static void getAnimalFactsMenu() {
         int choice;
         do {
-            System.out.println("---------");
+            System.out.println("\n---------");
             System.out.println("--- Animal Fact Menu ---");
             System.out.println("Choose which animal to get facts about");
             System.out.println("---------");
@@ -595,6 +646,7 @@ public class ZooManager {
         } while (choice !=0);
     }
 
+    //store menu custom feature
     private static void getZooStoreMenu(Visitor visitor) {
         GiftShop giftShop = new GiftShop();
         Cafe cafe = new Cafe();
@@ -602,7 +654,7 @@ public class ZooManager {
 
         int choice;
         do {
-            System.out.println("---------");
+            System.out.println("\n---------");
             System.out.println("--- Which store do you want to visit?");
             System.out.println("---------");
             System.out.println("1. Visit the Cafe");
@@ -629,7 +681,7 @@ public class ZooManager {
                     break;
 
                 case 4:
-                    System.out.println("---------");
+                    System.out.println("\n---------");
                     System.out.println("Balance: " + visitor.getBalance());
                     System.out.println("---------");
                     break;
@@ -643,12 +695,13 @@ public class ZooManager {
         }while (choice !=0);
     }//get zoo store menu
 
+    //store logic
     public static void visitStore(Store store, Visitor visitor) {
 
         int choice;
 
         do {
-            System.out.println("---------");
+            System.out.println("\n---------");
             store.displayItems();
             System.out.println("0. Return to Stores Menu");
 

@@ -1,2 +1,2 @@
 Zoo Name: Belfast city zoo
-Total Animals: 1
+Total Animals: 3

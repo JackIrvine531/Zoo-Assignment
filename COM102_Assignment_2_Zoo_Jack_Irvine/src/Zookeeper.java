@@ -7,9 +7,10 @@ public class Zookeeper {
         this.name = name;
     }
 
+    //method to preform daily care on each of the animals
     public void preformDailyCare(List<Animal> animals) {
 
-        System.out.println("--- Daily care routine ---");
+        System.out.println("\n--- Daily care routine ---");
 
         for (Animal a : animals) {
 //            general care

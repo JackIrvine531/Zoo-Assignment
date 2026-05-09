@@ -1,8 +1,10 @@
 public class GiftShop extends Store {
 
+    //constructor
     public GiftShop() {
         super("Gift Shop");
 
+        //items that will be displayed and can be bought
         items.add(new Item("Eagle plush", 20));
         items.add(new Item("Toucan plush", 24));
         items.add(new Item("Owl plush", 20));

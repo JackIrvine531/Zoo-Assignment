@@ -18,8 +18,8 @@ public class Zoo {
     //add animals
     public void addAnimal(Animal animal) {
         animals.add(animal);
-        System.out.println("---------");
-        System.out.println(animal.getName() + " added to the zoo.");
+        System.out.println("\n---------");
+        System.out.println(animal.getName() + " added to the zoo");
         System.out.println("---------");
     }
 
@@ -45,16 +45,52 @@ public class Zoo {
     }// remove animal from zoo
 
     //    update animal details
-    public void updateDetails(String name, String newColour, int newAge, double newWeight) {
+    public void updateDetails(String name, String newName, String newColour, int newAge, double newWeight,
+                              Double newWingSpan, Double newBeakLength, Integer newHearingRange,
+                              Boolean newHungryHippo, Integer newNumTeeth, Integer newSwimSpeed, Double newBiteForce,
+                              Integer newTongueFlicks, Integer newBurrowDepth) {
         for (Animal a: animals) {
             if (a.getName().equalsIgnoreCase(name)) {
 
-                a.setName(name);
+
+                //set basics for all animals
+                a.setName(newName);
                 a.setColour(newColour);
                 a.setAge(newAge);
                 a.setWeight(newWeight);
 
-                System.out.println(name + " updated successfully");
+
+                //set instance variables
+                if (a instanceof Eagle && newWingSpan != null) {
+                    ((Eagle) a).setWingSpan(newWingSpan);
+                    
+                } else if (a instanceof Toucan && newBeakLength != null) {
+                    ((Toucan) a).setBeakLength(newBeakLength);
+                    
+                } else if (a instanceof Owl && newHearingRange != null) {
+                    ((Owl) a).setHearingRange(newHearingRange);
+                    
+                } else if (a instanceof Hippo && newHungryHippo != null) {
+                    ((Hippo) a).setHungryHippo(newHungryHippo);
+                    
+                } else if (a instanceof Shark && newNumTeeth != null) {
+                    ((Shark) a).setNumTeeth(newNumTeeth);
+                    
+                } else if (a instanceof Penguin && newSwimSpeed != null) {
+                    ((Penguin) a).setSwimSpeed(newSwimSpeed);
+                    
+                } else if (a instanceof Crocodile && newBiteForce != null) {
+                    ((Crocodile) a).setBiteForce(newBiteForce);
+
+                } else if (a instanceof Python && newTongueFlicks != null) {
+                    ((Python) a).setTongueFlicksPerMin(newTongueFlicks);
+
+                } else if (a instanceof Caecilian && newBurrowDepth != null) {
+                    ((Caecilian) a).setBurrowDepth(newBurrowDepth);
+
+                }
+
+                System.out.println("Animal updated successfully");
                 return;
             }else {
                 System.out.println("Animal not found");
@@ -73,9 +109,12 @@ public class Zoo {
         return null;
     }
 
+    //print out the zoo report
     public void zooReport() {
         ArrayList<String> animalTypes = new ArrayList<>();
         ArrayList<Integer> counts = new ArrayList<>();
+
+        //2d arraylist that stores animals by class and what colours those animals are so we can calculate the dominant colour
         ArrayList<ArrayList<String>> colourLists = new ArrayList<>();
 
         for (Animal currAnimal : animals) {
@@ -100,7 +139,7 @@ public class Zoo {
         }//for
 
         // print report
-        System.out.println("--- Zoo Report ---");
+        System.out.println("\n--- Zoo Report ---");
         System.out.println("Zoo name: " + zooName);
 
         for (int i = 0; i< animalTypes.size(); i++) {
@@ -141,28 +180,30 @@ public class Zoo {
         return dominant;
     }//get dominant colour
 
+    //displays all animals in the zoo
     public void displayAllAnimals() {
         if (animals.isEmpty()) {
             System.out.println("There are no animals in the Zoo");
             return;
         }
 
-        System.out.println("--- Animals in " + zooName + " ---");
+        System.out.println("\n--- Animals in " + zooName + " ---");
         int count = 1;
         for (Animal a : animals) {
-            System.out.println("Animal No: " + count);
+            System.out.println("\nAnimal No: " + count);
             a.displayDetails();
             System.out.println("---------");
             count++;
         }
     }//display details
 
+    //method for searching the zoo for animal by its name
     public void searchByName(String name) {
         boolean found = false;
 
         for (Animal a : animals) {
             if (a.getName().equalsIgnoreCase(name)) {
-                System.out.println("---------");
+                System.out.println("\n---------");
                 System.out.println(a.getName() + " found: ");
                 a.displayDetails();
                 System.out.println(a.makeSound());
@@ -173,7 +214,7 @@ public class Zoo {
         }//outer for
 
         if (!found) {
-            System.out.println("---------");
+            System.out.println("\n---------");
             System.out.println("No animal found with that name");
             System.out.println("---------");
         }
@@ -185,7 +226,7 @@ public class Zoo {
 
         for (Animal a : animals) {
             if (a.getColour().equalsIgnoreCase(colour)) {
-                System.out.println("---------");
+                System.out.println("\n---------");
                 System.out.println("Animals of that colour found:");
                 a.displayDetails();
                 System.out.println(a.makeSound());
@@ -196,7 +237,7 @@ public class Zoo {
         }//outer for
 
         if (!found) {
-            System.out.println("---------");
+            System.out.println("\n---------");
             System.out.println("No animals found with that colour");
             System.out.println("---------");
         }
@@ -288,7 +329,7 @@ public class Zoo {
                         writer.write("Burrow Depth: " + ((Caecilian) a).getBurrowDepth() + "\n");
                     }
 
-                    writer.write("---------");
+                    writer.write("---------\n");
                 }//if else
             } //for
 
@@ -314,6 +355,7 @@ public class Zoo {
         }//try catch
     }//load zoo details
 
+    //load animal details
     public void loadAnimalDetails() {
 
         try (BufferedReader reader = new BufferedReader(new FileReader("AnimalDetails.txt"))) {
