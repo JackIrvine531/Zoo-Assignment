@@ -43,10 +43,6 @@ public class Zookeeper {
 
     }
 
-    public void setName(){
-
-    }
-
     public String getName() {
         return name;
     }

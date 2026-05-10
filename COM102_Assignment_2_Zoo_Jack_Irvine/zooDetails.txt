@@ -1,2 +1,2 @@
-Zoo Name: Belfast city zoo
-Total Animals: 3
+Zoo Name: London zoo
+Total Animals: 0
