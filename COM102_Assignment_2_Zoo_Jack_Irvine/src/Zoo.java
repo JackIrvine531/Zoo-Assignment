@@ -141,6 +141,7 @@ public class Zoo {
         // print report
         System.out.println("\n--- Zoo Report ---");
         System.out.println("Zoo name: " + zooName);
+        System.out.println("Total Animals: " + animals.size());
 
         for (int i = 0; i< animalTypes.size(); i++) {
             String type = animalTypes.get(i);

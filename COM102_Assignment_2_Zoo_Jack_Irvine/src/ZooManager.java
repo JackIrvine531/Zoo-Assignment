@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class ZooManager {
-    private static final Scanner userInput = new Scanner(System.in);
+    private static Scanner userInput = new Scanner(System.in);
 
     //program main method that starts up the main menu
     public static void main(String[] args){
@@ -368,7 +368,7 @@ public class ZooManager {
     }//get valid menu choice number.
 
 //    view animal encloser custom feature
-    private static void viewEnclosureMenu(Zoo zoo) {
+    public static void viewEnclosureMenu(Zoo zoo) {
         int choice;
         do {
             System.out.println("\n---------");
@@ -720,5 +720,10 @@ public class ZooManager {
             }
         } while (true);
     }// visit store loop
+
+    //set scanner method for testing
+    public static void setScanner(Scanner newScanner) {
+        userInput = newScanner;
+    }
 
 }//class

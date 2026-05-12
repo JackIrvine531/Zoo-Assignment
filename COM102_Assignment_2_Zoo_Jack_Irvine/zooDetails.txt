@@ -1,2 +1,2 @@
 Zoo Name: London zoo
-Total Animals: 0
+Total Animals: 1

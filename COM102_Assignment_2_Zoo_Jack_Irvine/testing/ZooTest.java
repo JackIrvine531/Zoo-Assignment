@@ -68,7 +68,9 @@ class ZooTest {
         testZoo.addAnimal(owl);
 
         //act
-        testZoo.updateDetails("testName", "headwig", "white", 4, 7, null, null, 150, null, null, null, null, null, null);
+        testZoo.updateDetails("testName", "headwig", "white", 4, 7,
+                null, null, 150, null, null,
+                null, null, null, null);
         Animal updated = testZoo.findAnimal("headwig");
 
         //assert
@@ -94,7 +96,7 @@ class ZooTest {
     void testFindAnimalWhenEmpty() {
         //assign
         //act
-        Animal found = testZoo.findAnimal("simba");
+        Animal found = testZoo.findAnimal("george");
 
         //assert
         assertNull(found);
@@ -103,7 +105,7 @@ class ZooTest {
     @Test
     void zooReport() {
         //assign
-        String expectedResult = "\n--- Zoo Report ---\r\nZoo name: ZooName\r\nAnimal: Eagle\r\nCount: 1\r\nDominant colour: black\r\n-----------------------"
+        String expectedResult = "\n--- Zoo Report ---\r\nZoo name: ZooName\r\nTotal Animals: 1\r\nAnimal: Eagle\r\nCount: 1\r\nDominant colour: black\r\n-----------------------"
                 + System.lineSeparator();
 
         //act
