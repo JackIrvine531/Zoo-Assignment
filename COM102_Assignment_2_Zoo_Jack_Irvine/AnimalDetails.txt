@@ -1,7 +1,7 @@
 Type: Eagle
-Name: Stephen
-Age: 8
-Colour: Gold
-Weight: 14.0
-WingSpan: 2.0
+Name: steven
+Age: 5
+Colour: black
+Weight: 23.0
+WingSpan: 1.5
 ---------

@@ -29,7 +29,7 @@ class ZookeeperTest {
         testZoo.loadZooDetails();
         testZoo.loadAnimalDetails();
 
-        String expectedResult = "\n--- Daily care routine ---\r\nChecking health of Jasper\r\nAnimal type: Eagle\nName: Jasper\nColour: black\nAge: 6\nWeight: 6.0kg\nWingspan: 1.6\n\r\nPerforming wing health check...\r\nJasper's wings are in good condition\r\nJasper is in good health\r\n---------" + System.lineSeparator();
+        String expectedResult = "\n--- Daily care routine ---\r\nChecking health of Stephen\r\nAnimal type: Eagle\nName: Stephen\nColour: Gold\nAge: 8\nWeight: 14.0kg\nWingspan: 2.0\n\r\nPerforming wing health check...\r\nStephen's wings are in good condition\r\nStephen is in good health\r\n---------" + System.lineSeparator();
 
         //act
         keeper.preformDailyCare(testZoo.getAnimals());
